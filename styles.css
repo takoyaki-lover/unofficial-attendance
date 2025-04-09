@@ -16,14 +16,14 @@ body {
 
 .title {
     font-size: 1.8rem;
-    margin: 2px 0 0 0;
+    margin: 2px 0 -10px 0;
 }
 
 .room-box {
     display: inline-block;
     border: 2px #ffffff solid;
     width: max-content;
-    margin: 20px 0 0 0;
+    margin: 40px 0 0 0;
     padding: 15px 30px;
 }
 
