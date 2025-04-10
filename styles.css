@@ -1,33 +1,96 @@
 html {
     font-size: 20px;
     font-family: sans-serif;
-}
-
-body {
-    width: 350px;
-    margin: auto;
     text-align: center;
 }
 
+body {
+    width: 370px;
+    margin: auto;
+}
+
 .theme {
-    background-color: #1b1b1b;
+    background-color: #222222;
     color: #ffffff;
 }
 
 .title {
     font-size: 1.8rem;
-    margin: 2px 0 -10px 0;
+    margin: 3px 0 -10px 0;
 }
 
 .room-box {
-    display: inline-block;
     border: 2px #ffffff solid;
     width: max-content;
-    margin: 40px 0 0 0;
-    padding: 15px 30px;
+    margin: 40px auto 0 auto;
+    padding: 15px 40px;
 }
 
 .room-title, .anchor {
     font-size: 1rem;
     margin: 0;
+}
+
+.anchor {
+    margin: 4px 0 0 0;
+}
+
+a {
+    color: #1a73e8;
+}
+
+a:visited {
+    color: #ff4081;
+}
+
+a:hover {
+    color: #1a73ff;
+}
+
+a:active {
+    color: #1a73d6;
+}
+
+.btn-copy-area {
+    margin: 8px 0 0 0;
+}
+
+.btn {
+    font-family: sans-serif;
+    font-size: .8rem;
+    color: #000000;
+    margin: 0;
+    padding: 1px 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.input-class-area {
+    border: 2px #ffffff solid;
+    width: max-content;
+    margin: 40px auto 0 auto;
+    padding: 15px 30px;
+}
+
+.input-title {
+    font-size: 1em;
+    margin: 0;
+}
+
+
+.input-area {
+    margin: 7px 0 0 0;
+}
+
+.input-class-num {
+    font-family: arial;
+    font-size: 25px;
+    width: 176px;
+    height: 27px;
+}
+
+.btn-jump-area {
+    margin: 9px 0 0 0;
 }
