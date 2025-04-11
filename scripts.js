@@ -9,6 +9,10 @@ document.getElementById('copy-642').addEventListener('click', function () {
     navigator.clipboard.writeText(url + '642');
 })
 
+document.getElementById('copy-614').addEventListener('click', function () {
+    navigator.clipboard.writeText(url + '614');
+})
+
 
 document.getElementById('input-jump').addEventListener('click', function () {
     let classNum = document.getElementById('class-num').value;
