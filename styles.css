@@ -23,7 +23,7 @@ body {
     border: 2px #ffffff solid;
     width: max-content;
     margin: 40px auto 0 auto;
-    padding: 15px 40px;
+    padding: 15px 35px;
 }
 
 .room-title, .anchor {
@@ -37,10 +37,6 @@ body {
 
 a {
     color: #1a73e8;
-}
-
-a:visited {
-    color: #ff4081;
 }
 
 a:hover {
@@ -59,18 +55,28 @@ a:active {
     font-family: sans-serif;
     font-size: .8rem;
     color: #000000;
+    background-color: #efefef;
+    border: 2px #666666 solid;
+    border-radius: 2px;
+    width: max-content;
+    height: max-content;
     margin: 0;
     padding: 1px 10px;
 }
 
 .btn:hover {
     cursor: pointer;
+    background-color: #dddddd;
+}
+
+.btn:active {
+    background-color: #d0d0d0;
 }
 
 .input-class-area {
     border: 2px #ffffff solid;
     width: max-content;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 10px auto;
     padding: 15px 30px;
 }
 
