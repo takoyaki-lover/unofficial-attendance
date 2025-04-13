@@ -1,7 +1,14 @@
 html {
     font-size: 20px;
-    font-family: sans-serif;
     text-align: center;
+}
+
+html, a, .btn {
+    font-family: Meiryo, sans-serif;
+}
+
+.input-class-num {
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -52,7 +59,6 @@ a:active {
 }
 
 .btn {
-    font-family: sans-serif;
     font-size: .8rem;
     color: #000000;
     background-color: #efefef;
@@ -91,7 +97,6 @@ a:active {
 }
 
 .input-class-num {
-    font-family: arial;
     font-size: 25px;
     width: 176px;
     height: 27px;
