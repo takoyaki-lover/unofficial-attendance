@@ -12,13 +12,8 @@ html, a, .btn {
 }
 
 body {
-    width: 370px;
+    width: 400px;
     margin: auto;
-}
-
-.theme {
-    background-color: #222222;
-    color: #ffffff;
 }
 
 .title {
@@ -26,8 +21,11 @@ body {
     margin: 3px 0 -10px 0;
 }
 
+.sur {
+    border: 2px solid;
+}
+
 .room-box {
-    border: 2px #ffffff solid;
     width: max-content;
     margin: 40px auto 0 auto;
     padding: 15px 35px;
@@ -80,7 +78,6 @@ a:active {
 }
 
 .input-class-area {
-    border: 2px #ffffff solid;
     width: max-content;
     margin: 40px auto 10px auto;
     padding: 15px 30px;
@@ -97,11 +94,106 @@ a:active {
 }
 
 .input-class-num {
-    font-size: 25px;
+    border: 2px solid;
+    border-color: #666666;
+    border-radius: 4px;
+    font-size: 1.1rem;
     width: 176px;
     height: 27px;
 }
 
 .btn-jump-area {
     margin: 9px 0 0 0;
+}
+
+#ads {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.ads-content {
+    margin: 100px auto auto auto;
+    width: calc(400px - 20px);
+    padding: 0 0 23px 0;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.ads-title {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.img {
+    width: calc(400px - 30px);
+    height: auto;
+    margin: 0 0 -8.8px 0;
+}
+
+.content-text {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.margin-top {
+    margin: 15px 0 0 0;
+}
+
+.cross-area {
+    margin: 0 0 0 auto;
+    padding: 8px;
+    width: max-content;
+    height: max-content;
+}
+
+.cross {
+    height: 7px;
+    width: 7px;
+    margin: 0;
+}
+
+.stick-area {
+    position: relative;
+    top: 3px;
+    right: .5px;
+}
+
+.stick {
+    position: absolute;
+    width: 8px;
+    height: 1.2px;
+    background-color: #777777;
+}
+
+.stick-1 {
+    transform: rotate(45deg);
+}
+
+.stick-2 {
+    transform: rotate(-45deg);
+}
+
+.cross:active .stick-1, .cross:active .stick-2{
+    background-color: #888888;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        width: 100%;
+    }
+
+    .ads-content {
+        width: calc(100% - 20px)
+    }
+
+    .img {
+        width: calc(100% - 10px);
+    }
+
 }
