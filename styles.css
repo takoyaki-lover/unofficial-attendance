@@ -13,7 +13,7 @@ html, a, .btn {
 
 body {
     width: 400px;
-    margin: auto;
+    margin: auto auto 30px auto;
 }
 
 .title {
@@ -25,19 +25,54 @@ body {
     border: 2px solid;
 }
 
-.room-box {
-    width: max-content;
-    margin: 40px auto 0 auto;
-    padding: 15px 35px;
+.server-time-area, .terminal-time-area {
+    width: 340px;
+    margin: 25px auto 0 auto;
+    padding: 15px 0;
 }
 
-.room-title, .anchor {
-    font-size: 1rem;
+.server-time, .terminal-time {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#sun, #mon, #tue, #wed, #thu, #fri, #sat {
+    display: none;
+}
+
+.sun {
+    color: #fa2802;
+}
+
+.sat {
+    color: #2460b4;
+}
+
+.number {
+    font-variant-numeric: tabular-nums;
+}
+
+.first {
     margin: 0;
 }
 
-.anchor {
+.line-spacing {
     margin: 4px 0 0 0;
+}
+
+.terminal-time {
+    margin: 0;
+}
+
+.room-box {
+    width: 230px;
+    margin: 35px auto 0 auto;
+    padding: 15px 0;
+}
+
+.room-title {
+    font-size: 1rem;
+    margin: 0;
 }
 
 a {
@@ -78,16 +113,15 @@ a:active {
 }
 
 .input-class-area {
-    width: max-content;
-    margin: 40px auto 10px auto;
-    padding: 15px 30px;
+    width: 290px;
+    margin: 40px auto 0 auto;
+    padding: 15px 0;
 }
 
 .input-title {
     font-size: 1em;
     margin: 0;
 }
-
 
 .input-area {
     margin: 7px 0 0 0;
