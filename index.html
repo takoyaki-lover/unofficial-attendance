@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>出席システムハブ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
+<body class="theme-main">
+
+    <h1 class="title">出席システムハブ</h1>
+
+    <div class="server-time-area sur">
+        <p class="first">サーバーの時間(JST)</p>
+        <p class="line-spacing server-time">準備中</p>
+    </div>
+    <div class="terminal-time-area sur">
+        <p class="first">あなたの端末の時間</p>
+        <p class="line-spacing terminal-time"><span class="number" id="current-day"></span> (<span id="sun" class="sun">日</span><span id="mon">月</span><span id="tue">火</span><span id="wed">水</span><span id="thu">木</span><span id="fri">金</span><span id="sat" class="sat">土</span>) <span class="number" id="current-time"></span></ｐ>
+    </div>
+
+    <div class="room-box sur">
+        <p class="room-title">622講義室</p>
+        <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/622" target="_blank" rel="noopener noreferrer">622の出席登録へ</a></p>
+        <p class="btn-copy-area"><button class="btn copy" id="copy-622">URLをコピー</button></p>
+    </div>
+
+    <div class="room-box sur">
+        <p class="room-title">642講義室</p>
+        <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/642" target="_blank" rel="noopener noreferrer">642の出席登録へ</a></p>
+        <p class="btn-copy-area"><button class="btn copy" id="copy-642">URLをコピー</button></p>
+    </div>
+
+    <div class="room-box sur">
+        <p class="room-title">614講義室</p>
+        <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/614" target="_blank" rel="noopener noreferrer">614の出席登録へ</a></p>
+        <p class="btn-copy-area"><button class="btn copy" id="copy-614">URLをコピー</button></p>
+    </div>
+
+    <div class="input-class-area sur">
+        <p class="input-title">教室番号を入力して出席</p>
+        <p class="input-area"><input class="input-class-num" id="class-num" type="text" inputmode="numeric" placeholder="入力欄"></p>
+        <p class="btn-jump-area"><button class="btn" id="input-jump">この教室の出席登録へ</button></p>
+        <p class="btn-copy-area"><button class="btn copy" id="copy-input-num">URLをコピー</button></p>
+    </div>
+
+    <div id="ads">
+        <div class="ads-content theme-ads">
+            <div class="cross-area">
+                <div class="cross" id="ads-close">
+                    <div class="stick-area">
+                        <div class="stick stick-1"></div>
+                        <div class="stick stick-2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-main">
+                <p class="ads-title">広告</p>
+                <a href="https://www.kobayashi.co.jp/seihin/choleste/" target="_blank" rel="noopener noreferrer"><img src="medicine.png" class="img" alt="ads"></a>
+                <p class="content-text margin-top">1か月で10kg以上痩せる？！</p>
+                <p class="content-text">本気で変わりたいあなたへ！</p>
+                <p class="content-text">今だけなんと20%オフ！</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
