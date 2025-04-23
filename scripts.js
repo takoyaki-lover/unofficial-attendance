@@ -40,6 +40,98 @@ setInterval(() => {
     themeJudge();
 }, 1000);
 
+function timeDisplay() {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = String(date.getMonth() + 1).padStart(2, '0');
+    let day = String(date.getDate()).padStart(2, '0');
+    let dayOfWeek = date.getDay();
+    let hour = String(date.getHours()).padStart(2, '0');
+    let minute = String(date.getMinutes()).padStart(2, '0');
+    let second = String(date.getSeconds()).padStart(2, '0');
+    document.getElementById('current-day').textContent = `${year}/${month}/${day}`;
+    switch (dayOfWeek) {
+        case 0: {
+            document.getElementById('sun').style.display = 'inline';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 1: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'inline';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 2: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'inline';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 3: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'inline';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 4: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'inline';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 5: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'inline';
+            document.getElementById('sat').style.display = 'none';
+            break;
+        }
+        case 6: {
+            document.getElementById('sun').style.display = 'none';
+            document.getElementById('mon').style.display = 'none';
+            document.getElementById('tue').style.display = 'none';
+            document.getElementById('wed').style.display = 'none';
+            document.getElementById('thu').style.display = 'none';
+            document.getElementById('fri').style.display = 'none';
+            document.getElementById('sat').style.display = 'inline';
+            break;
+        }
+    }
+    document.getElementById('current-time').textContent = `${hour}:${minute}:${second}`;
+};
+
+timeDisplay();
+
+setInterval(() => {
+    timeDisplay();
+}, 1);
+
+
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
 
 document.getElementById('copy-622').addEventListener('click', function () {
