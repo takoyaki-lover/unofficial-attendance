@@ -12,40 +12,49 @@
     <h1 class="title">出席システムハブ</h1>
 
     <div class="server-time-area sur">
-        <p class="first">サーバーの時間(JST)</p>
-        <p class="line-spacing server-time">準備中</p>
+        <p class="div-title">サーバーの時間(JST)</p>
+        <p class="line-spacing server-time bold">準備中</p>
     </div>
+
     <div class="terminal-time-area sur">
-        <p class="first">あなたの端末の時間</p>
-        <p class="line-spacing terminal-time"><span class="number" id="current-day"></span> (<span id="sun" class="sun">日</span><span id="mon">月</span><span id="tue">火</span><span id="wed">水</span><span id="thu">木</span><span id="fri">金</span><span id="sat" class="sat">土</span>) <span class="number" id="current-time"></span></ｐ>
+        <p class="div-title">あなたの端末の時間</p>
+        <p class="line-spacing terminal-time bold"><span class="number" id="current-day"></span> (<span id="sun" class="sun">日</span><span id="mon">月</span><span id="tue">火</span><span id="wed">水</span><span id="thu">木</span><span id="fri">金</span><span id="sat" class="sat">土</span>) <span class="number" id="current-time"></span></ｐ>
     </div>
 
-    <div class="room-box sur">
-        <p class="room-title">622講義室</p>
+    <!--
+    <div class="room-box sur" id="622">
+        <p class="div-title">622講義室</p>
         <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/622" target="_blank" rel="noopener noreferrer">622の出席登録へ</a></p>
-        <p class="btn-copy-area"><button class="btn copy" id="copy-622">URLをコピー</button></p>
+        <p class="btn-area"><button class="btn btn-normal" onclick="navigator.clipboard.writeText('https:\/\/attendance.is.it-chiba.ac.jp/attendance/class_room/622');">URLをコピー</button></p>
+        <p class="btn-area"><button class="btn btn-small" onclick="deleteRoom(622);">教室を削除</button></p>
     </div>
 
-    <div class="room-box sur">
-        <p class="room-title">642講義室</p>
-        <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/642" target="_blank" rel="noopener noreferrer">642の出席登録へ</a></p>
-        <p class="btn-copy-area"><button class="btn copy" id="copy-642">URLをコピー</button></p>
+    <div class="nothing-box sur" id="nothing">
+        <p class="div-title">まだ教室が<span class="bold">登録されていません</span></p>
+        <p class="line-spacing">下記から登録してください</p>
+    </div>
+    -->
+
+    <div class="regist-box sur" id="regist">
+        <p class="div-title">教室の登録</p>
+        <p class="input-area"><input class="input" id="regist-class-num" type="text" inputmode="numeric" placeholder="入力欄"></p>
+        <p class="btn-area"><button class="btn btn-normal" id="regist-input-num">登録</button></p>
+        <p class="btn-area"><button class="btn btn-small" id="delete-room-all">すべての教室を削除</button> </p>
     </div>
 
-    <div class="room-box sur">
-        <p class="room-title">614講義室</p>
-        <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/614" target="_blank" rel="noopener noreferrer">614の出席登録へ</a></p>
-        <p class="btn-copy-area"><button class="btn copy" id="copy-614">URLをコピー</button></p>
+    <div class="class-time-box sur">
+        <p class="div-title">授業時間の登録</p>
+        <p class="line-spacing">準備中</p>
     </div>
 
-    <div class="input-class-area sur">
-        <p class="input-title">教室番号を入力して出席</p>
-        <p class="input-area"><input class="input-class-num" id="class-num" type="text" inputmode="numeric" placeholder="入力欄"></p>
-        <p class="btn-jump-area"><button class="btn" id="input-jump">この教室の出席登録へ</button></p>
-        <p class="btn-copy-area"><button class="btn copy" id="copy-input-num">URLをコピー</button></p>
+    <div class="input-box sur">
+        <p class="div-title">教室を入力して出席</p>
+        <p class="input-area"><input class="input" id="input-class-num" type="text" inputmode="numeric" placeholder="入力欄"></p>
+        <p class="btn-area"><button class="btn btn-normal" id="input-jump">この教室の出席画面へ</button></p>
+        <p class="btn-area"><button class="btn btn-normal" id="copy-input-num">URLをコピー</button></p>
     </div>
 
-    <div id="ads">
+    <div class="ads" id="ads">
         <div class="ads-content theme-ads">
             <div class="cross-area">
                 <div class="cross" id="ads-close">
