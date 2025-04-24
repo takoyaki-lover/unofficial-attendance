@@ -184,9 +184,6 @@ function deleteRoom(classNum) {
         }
     }
     localStorage.classlist = JSON.stringify(classlist);
-    if (classlist.length == 0) {
-        document.getElementById('regist').insertAdjacentHTML('beforebegin', nothingHTML());
-    }
     location.reload();
 }
 
@@ -197,7 +194,6 @@ document.getElementById('delete-room-all').addEventListener('click', function ()
         classlist.pop();
     }
     localStorage.classlist = JSON.stringify(classlist);
-    document.getElementById('regist').insertAdjacentHTML('beforebegin', nothingHTML());
     location.reload();
 })
 
