@@ -12,26 +12,26 @@
     <h1 class="title">出席システムハブ</h1>
 
     <div class="server-time-area sur">
-        <p class="div-title">サーバーの時間(JST)</p>
-        <p class="line-spacing server-time bold">準備中</p>
+        <p class="div-title">サーバーの時間</p>
+        <p class="line-spacing server-time bold"><span id="success"><span class="number"><span id="s-y"></span>/<span id="s-m"></span>/<span id="s-d"></span></span> (<span id="s-sun" class="sun">日</span><span id="s-mon" class="mon">月</span><span id="s-tue" class="tue">火</span><span id="s-wed" class="wed">水</span><span id="s-thu" class="thu">木</span><span id="s-fri" class="fri">金</span><span id="s-sat" class="sat">土</span>) <span class="number"><span id="s-h"></span>:<span id="s-mi"></span>:<span id="s-s"></span></span></span><span id="failure">取得できませんでした</span></p>
     </div>
 
-    <div class="terminal-time-area sur">
+    <div class="client-time-area sur">
         <p class="div-title">あなたの端末の時間</p>
-        <p class="line-spacing terminal-time bold"><span class="number" id="current-day"></span> (<span id="sun" class="sun">日</span><span id="mon">月</span><span id="tue">火</span><span id="wed">水</span><span id="thu">木</span><span id="fri">金</span><span id="sat" class="sat">土</span>) <span class="number" id="current-time"></span></ｐ>
+        <p class="line-spacing client-time bold"><span class="number"><span id="c-y"></span>/<span id="c-m"></span>/<span id="c-d"></span></span> (<span id="c-sun" class="sun">日</span><span id="c-mon" class="mon">月</span><span id="c-tue" class="tue">火</span><span id="c-wed" class="wed">水</span><span id="c-thu" class="thu">木</span><span id="c-fri" class="fri">金</span><span id="c-sat" class="sat">土</span>) <span class="number"><span id="c-h"></span>:<span id="c-mi"></span>:<span id="c-s"></span></span></p>
     </div>
 
     <!--
+    <div class="nothing-box sur" id="nothing">
+        <p class="div-title">まだ教室が<span class="bold">登録されていません</span></p>
+        <p class="line-spacing">下記から登録してください</p>
+    </div>
+
     <div class="room-box sur" id="622">
         <p class="div-title">622講義室</p>
         <p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/622" target="_blank" rel="noopener noreferrer">622の出席登録へ</a></p>
         <p class="btn-area"><button class="btn btn-normal" onclick="navigator.clipboard.writeText('https:\/\/attendance.is.it-chiba.ac.jp/attendance/class_room/622');">URLをコピー</button></p>
         <p class="btn-area"><button class="btn btn-small" onclick="deleteRoom(622);">教室を削除</button></p>
-    </div>
-
-    <div class="nothing-box sur" id="nothing">
-        <p class="div-title">まだ教室が<span class="bold">登録されていません</span></p>
-        <p class="line-spacing">下記から登録してください</p>
     </div>
     -->
 
