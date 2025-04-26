@@ -44,13 +44,15 @@ setInterval(() => {
 
 // サーバー時間を表示
 function displayServerTime() {
-    var request = new XMLHttpRequest();
+    let request = new XMLHttpRequest();
     request.open('HEAD', window.location.href, true);
     request.send();
     request.onreadystatechange = function () {
         if (this.readyState === 4) {
-            var serverDate = new Date(request.getResponseHeader('Date'));
-            let date = serverDate;
+            let serverDate = new Date(request.getResponseHeader('Date'));
+            let gap = serverDate.getTime() - new Date().getTime();
+            let Sdate = new Date().getTime() + gap;
+            let date = new Date(Sdate);
             let year = date.getFullYear();
             let month = String(date.getMonth() + 1).padStart(2, '0');
             let day = String(date.getDate()).padStart(2, '0');
@@ -127,7 +129,7 @@ setInterval(() => {
 
 setInterval(() => {
     displayServerTime();
-}, 1000);
+}, 1);
 
 // 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
