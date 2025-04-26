@@ -122,9 +122,12 @@ function displayClientTime() {
 displayServerTime();
 displayClientTime();
 setInterval(() => {
-    displayServerTime();
     displayClientTime();
 }, 1);
+
+setInterval(() => {
+    displayServerTime();
+}, 1000);
 
 // 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
