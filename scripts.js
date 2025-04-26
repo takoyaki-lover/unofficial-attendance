@@ -42,8 +42,55 @@ setInterval(() => {
     themeJudge();
 }, 1000);
 
-// 時間を表示させる
-function timeDisplay() {
+// サーバー時間を表示
+function displayServerTime() {
+    var request = new XMLHttpRequest();
+    request.open('HEAD', window.location.href, true);
+    request.send();
+    request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            var serverDate = new Date(request.getResponseHeader('Date'));
+            let date = serverDate;
+            let year = date.getFullYear();
+            let month = String(date.getMonth() + 1).padStart(2, '0');
+            let day = String(date.getDate()).padStart(2, '0');
+            let dayOfWeek = date.getDay();
+            let hour = String(date.getHours()).padStart(2, '0');
+            let minute = String(date.getMinutes()).padStart(2, '0');
+            let second = String(date.getSeconds()).padStart(2, '0');
+
+            document.getElementById('success').style.display = 'inline';
+            document.getElementById('failure').style.display = 'none';
+
+            document.getElementById('s-y').textContent = year;
+            document.getElementById('s-m').textContent = month;
+            document.getElementById('s-d').textContent = day;
+
+            let week = [0, 0, 0, 0, 0, 0, 0];
+            week.splice(dayOfWeek, 1, 1);
+            let documentIds = ['s-sun', 's-mon', 's-tue', 's-wed', 's-thu', 's-fri', 's-sat'];
+            for (i = 0; i < 7; i++) {
+                if (week[i] == 1) {
+                    document.getElementById(documentIds[i]).style.display = 'inline';
+                } else {
+                    document.getElementById(documentIds[i]).style.display = 'none';
+                }
+            }
+
+            document.getElementById('s-h').textContent = hour;
+            document.getElementById('s-mi').textContent = minute;
+            document.getElementById('s-s').textContent = second;
+        } else {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('failure').style.display = 'inline';
+        }
+
+    }
+
+};
+
+// クライアント（端末）の時間を表示
+function displayClientTime() {
     let date = new Date();
     let year = date.getFullYear();
     let month = String(date.getMonth() + 1).padStart(2, '0');
@@ -52,88 +99,34 @@ function timeDisplay() {
     let hour = String(date.getHours()).padStart(2, '0');
     let minute = String(date.getMinutes()).padStart(2, '0');
     let second = String(date.getSeconds()).padStart(2, '0');
-    document.getElementById('current-day').textContent = `${year}/${month}/${day}`;
-    switch (dayOfWeek) {
-        case 0: {
-            document.getElementById('sun').style.display = 'inline';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 1: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'inline';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 2: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'inline';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 3: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'inline';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 4: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'inline';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 5: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'inline';
-            document.getElementById('sat').style.display = 'none';
-            break;
-        }
-        case 6: {
-            document.getElementById('sun').style.display = 'none';
-            document.getElementById('mon').style.display = 'none';
-            document.getElementById('tue').style.display = 'none';
-            document.getElementById('wed').style.display = 'none';
-            document.getElementById('thu').style.display = 'none';
-            document.getElementById('fri').style.display = 'none';
-            document.getElementById('sat').style.display = 'inline';
-            break;
+    document.getElementById('c-y').textContent = year;
+    document.getElementById('c-m').textContent = month;
+    document.getElementById('c-d').textContent = day;
+
+    let week = [0, 0, 0, 0, 0, 0, 0];
+    week.splice(dayOfWeek, 1, 1);
+    let documentIds = ['c-sun', 'c-mon', 'c-tue', 'c-wed', 'c-thu', 'c-fri', 'c-sat'];
+    for (i = 0; i < 7; i++) {
+        if (week[i] == 1) {
+            document.getElementById(documentIds[i]).style.display = 'inline';
+        } else {
+            document.getElementById(documentIds[i]).style.display = 'none';
         }
     }
-    document.getElementById('current-time').textContent = `${hour}:${minute}:${second}`;
+
+    document.getElementById('c-h').textContent = hour;
+    document.getElementById('c-mi').textContent = minute;
+    document.getElementById('c-s').textContent = second;
 };
 
-timeDisplay();
+displayServerTime();
+displayClientTime();
 setInterval(() => {
-    timeDisplay();
+    displayServerTime();
+    displayClientTime();
 }, 1);
 
-
+// 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
 
 if (localStorage.classlist == undefined) {
@@ -149,7 +142,7 @@ function nothingHTML() {
     return '<div class="nothing-box sur" id="nothing"><p class="div-title">まだ教室が<span class="bold">登録されていません</span></p><p class="line-spacing">下記から登録してください</p></div>';
 };
 
-// 追加されていたものを描写
+// 配列に従って描写
 function registered() {
     let classlist = JSON.parse(localStorage.classlist);
     let classNum;
