@@ -25,13 +25,13 @@ body {
     border: 2px solid;
 }
 
-.server-time-area, .terminal-time-area {
+.server-time-area, .client-time-area {
     width: 350px;
-    margin: 25px auto 0 auto;
+    margin: 10px auto 0 auto;
     padding: 15px 0;
 }
 
-.server-time, .terminal-time {
+.server-time, .client-time {
     font-size: 1.1rem;
 }
 
@@ -39,7 +39,7 @@ body {
     font-weight: bold;
 }
 
-#sun, #mon, #tue, #wed, #thu, #fri, #sat {
+.sun, .mon, .tue, .wed, .thu, .fri, .sat {
     display: none;
 }
 
