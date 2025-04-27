@@ -42,52 +42,54 @@ setInterval(() => {
     themeJudge();
 }, 1000);
 
+
 // サーバー時間を表示
-function displayServerTime() {
-    let request = new XMLHttpRequest();
-    request.open('HEAD', window.location.href, true);
-    request.send();
-    request.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            let serverDate = new Date(request.getResponseHeader('Date'));
-            let gap = serverDate.getTime() - new Date().getTime();
-            let Sdate = new Date().getTime() + gap;
-            let date = new Date(Sdate);
-            let year = date.getFullYear();
-            let month = String(date.getMonth() + 1).padStart(2, '0');
-            let day = String(date.getDate()).padStart(2, '0');
-            let dayOfWeek = date.getDay();
-            let hour = String(date.getHours()).padStart(2, '0');
-            let minute = String(date.getMinutes()).padStart(2, '0');
-            let second = String(date.getSeconds()).padStart(2, '0');
-
-            document.getElementById('success').style.display = 'inline';
-            document.getElementById('failure').style.display = 'none';
-
-            document.getElementById('s-y').textContent = year;
-            document.getElementById('s-m').textContent = month;
-            document.getElementById('s-d').textContent = day;
-
-            let week = [0, 0, 0, 0, 0, 0, 0];
-            week.splice(dayOfWeek, 1, 1);
-            let documentIds = ['s-sun', 's-mon', 's-tue', 's-wed', 's-thu', 's-fri', 's-sat'];
-            for (i = 0; i < 7; i++) {
-                if (week[i] == 1) {
-                    document.getElementById(documentIds[i]).style.display = 'inline';
-                } else {
-                    document.getElementById(documentIds[i]).style.display = 'none';
-                }
-            }
-
-            document.getElementById('s-h').textContent = hour;
-            document.getElementById('s-mi').textContent = minute;
-            document.getElementById('s-s').textContent = second;
-        } else {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('failure').style.display = 'inline';
-        }
-
+let request = new XMLHttpRequest();
+request.open('HEAD', window.location.href, true);
+request.send();
+request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+        let serverDate = new Date(request.getResponseHeader('Date'));
+        localStorage.gap = serverDate.getTime() - new Date().getTime();
+        document.getElementById('success').style.display = 'inline';
+        document.getElementById('failure').style.display = 'none';
+    } else {
+        document.getElementById('success').style.display = 'none';
+        document.getElementById('failure').style.display = 'inline';
     }
+}
+
+
+
+function displayServerTime() {
+    let date = new Date(new Date().getTime() + Number(localStorage.gap));
+    let year = date.getFullYear();
+    let month = String(date.getMonth() + 1).padStart(2, '0');
+    let day = String(date.getDate()).padStart(2, '0');
+    let dayOfWeek = date.getDay();
+    let hour = String(date.getHours()).padStart(2, '0');
+    let minute = String(date.getMinutes()).padStart(2, '0');
+    let second = String(date.getSeconds()).padStart(2, '0');
+
+
+    document.getElementById('s-y').textContent = year;
+    document.getElementById('s-m').textContent = month;
+    document.getElementById('s-d').textContent = day;
+
+    let week = [0, 0, 0, 0, 0, 0, 0];
+    week.splice(dayOfWeek, 1, 1);
+    let documentIds = ['s-sun', 's-mon', 's-tue', 's-wed', 's-thu', 's-fri', 's-sat'];
+    for (i = 0; i < 7; i++) {
+        if (week[i] == 1) {
+            document.getElementById(documentIds[i]).style.display = 'inline';
+        } else {
+            document.getElementById(documentIds[i]).style.display = 'none';
+        }
+    }
+
+    document.getElementById('s-h').textContent = hour;
+    document.getElementById('s-mi').textContent = minute;
+    document.getElementById('s-s').textContent = second;
 
 };
 
