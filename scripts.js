@@ -44,19 +44,26 @@ setInterval(() => {
 
 
 // サーバー時間を表示
+
+let intervalId;
 let request = new XMLHttpRequest();
 request.open('HEAD', window.location.href, true);
 request.send();
 request.onreadystatechange = function () {
-    if (this.readyState === 4) {
-        let serverDate = new Date(request.getResponseHeader('Date'));
-        localStorage.gap = serverDate.getTime() - new Date().getTime();
-        document.getElementById('success').style.display = 'inline';
-        document.getElementById('failure').style.display = 'none';
-    } else {
-        document.getElementById('success').style.display = 'none';
-        document.getElementById('failure').style.display = 'inline';
-    }
+    intervalId = setInterval(() => {
+        if (this.readyState === 4) {
+            let serverDate = new Date(request.getResponseHeader('Date'));
+            localStorage.gap = serverDate.getTime() - new Date().getTime();
+            document.getElementById('success').style.display = 'inline';
+            document.getElementById('failure').style.display = 'none';
+        } else {
+            document.getElementById('success').style.display = 'none';
+            document.getElementById('failure').style.display = 'inline';
+        }
+    }, 1);
+    setTimeout(() => {
+        clearInterval(intervalId)
+    }, 1000);
 }
 
 
@@ -70,7 +77,6 @@ function displayServerTime() {
     let hour = String(date.getHours()).padStart(2, '0');
     let minute = String(date.getMinutes()).padStart(2, '0');
     let second = String(date.getSeconds()).padStart(2, '0');
-
 
     document.getElementById('s-y').textContent = year;
     document.getElementById('s-m').textContent = month;
