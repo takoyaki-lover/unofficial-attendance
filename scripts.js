@@ -45,11 +45,11 @@ setInterval(() => {
 
 // サーバー時間を表示
 
-let intervalId;
 let request = new XMLHttpRequest();
 request.open('HEAD', window.location.href, true);
 request.send();
 request.onreadystatechange = function () {
+    let intervalId;
     intervalId = setInterval(() => {
         if (this.readyState === 4) {
             let serverDate = new Date(request.getResponseHeader('Date'));
@@ -62,7 +62,7 @@ request.onreadystatechange = function () {
         }
     }, 1);
     setTimeout(() => {
-        clearInterval(intervalId)
+        clearInterval(intervalId);
     }, 1000);
 }
 
