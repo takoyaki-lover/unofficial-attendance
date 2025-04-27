@@ -49,21 +49,15 @@ let request = new XMLHttpRequest();
 request.open('HEAD', window.location.href, true);
 request.send();
 request.onreadystatechange = function () {
-    let intervalId;
-    intervalId = setInterval(() => {
-        if (this.readyState === 4) {
-            let serverDate = new Date(request.getResponseHeader('Date'));
-            localStorage.gap = serverDate.getTime() - new Date().getTime();
-            document.getElementById('success').style.display = 'inline';
-            document.getElementById('failure').style.display = 'none';
-        } else {
-            document.getElementById('success').style.display = 'none';
-            document.getElementById('failure').style.display = 'inline';
-        }
-    }, 1);
-    setTimeout(() => {
-        clearInterval(intervalId);
-    }, 1000);
+    if (this.readyState === 4) {
+        let serverDate = new Date(request.getResponseHeader('Date'));
+        localStorage.gap = serverDate.getTime() - new Date().getTime();
+        document.getElementById('success').style.display = 'inline';
+        document.getElementById('failure').style.display = 'none';
+    } else {
+        document.getElementById('success').style.display = 'none';
+        document.getElementById('failure').style.display = 'inline';
+    }
 }
 
 
