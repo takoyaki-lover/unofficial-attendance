@@ -51,6 +51,7 @@ request.send();
 request.onreadystatechange = function () {
     if (this.readyState === 4) {
         let serverDate = new Date(request.getResponseHeader('Date'));
+        console.log(serverDate);
         localStorage.gap = serverDate.getTime() - new Date().getTime();
         document.getElementById('success').style.display = 'inline';
         document.getElementById('failure').style.display = 'none';
