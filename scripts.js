@@ -43,8 +43,8 @@ setInterval(() => {
 }, 1000);
 
 
-// サーバー時間を表示
-
+/*
+// サーバー時間と端末時間の差を取得
 let request = new XMLHttpRequest();
 request.open('HEAD', window.location.href, true);
 request.send();
@@ -61,8 +61,7 @@ request.onreadystatechange = function () {
     }
 }
 
-
-
+// サーバー時間を表示
 function displayServerTime() {
     let date = new Date(new Date().getTime() + Number(localStorage.gap));
     let year = date.getFullYear();
@@ -91,8 +90,8 @@ function displayServerTime() {
     document.getElementById('s-h').textContent = hour;
     document.getElementById('s-mi').textContent = minute;
     document.getElementById('s-s').textContent = second;
-
 };
+*/
 
 // クライアント（端末）の時間を表示
 function displayClientTime() {
@@ -124,15 +123,15 @@ function displayClientTime() {
     document.getElementById('c-s').textContent = second;
 };
 
-displayServerTime();
+//displayServerTime();
 displayClientTime();
+setInterval(() => {
+    //displayServerTime();
+}, 1);
 setInterval(() => {
     displayClientTime();
 }, 1);
 
-setInterval(() => {
-    displayServerTime();
-}, 1);
 
 // 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
@@ -143,7 +142,7 @@ if (localStorage.classlist == undefined) {
 
 // 追加するhtml文
 function registHTML(classNum) {
-    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" onclick="navigator.clipboard.writeText('https:\/\/attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}')">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small" onclick="deleteRoom(${classNum});">教室を削除</button></p></div>`;
+    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" onclick="copyRoomUrl(${classNum});">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small" onclick="deleteRoom(${classNum});">教室を削除</button></p></div>`;
 };
 
 function nothingHTML() {
@@ -175,6 +174,10 @@ document.getElementById('regist-input-num').addEventListener('click', function (
     document.getElementById('regist-class-num').value = '';
     location.reload();
 })
+
+function copyRoomUrl(classNum) {
+    navigator.clipboard.writeText(`https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}`);
+}
 
 function deleteRoom(classNum) {
     let classlist = JSON.parse(localStorage.classlist);
