@@ -1,4 +1,4 @@
-/* 
+/*
 // サーバー時間と端末時間の差を取得
 let request = new XMLHttpRequest();
 request.open('HEAD', window.location.href, true);
