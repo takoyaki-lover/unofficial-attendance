@@ -1,4 +1,4 @@
-// ライトテーマ
+// ライトテーマ 
 function themeLight() {
     for (i = 0; i < document.getElementsByClassName('theme-main').length; i++) {
         document.getElementsByClassName('theme-main')[i].style.backgroundColor = '#ffffff';
