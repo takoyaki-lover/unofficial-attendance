@@ -7,7 +7,7 @@ if (localStorage.classlist == undefined) {
 
 // 追加するhtml文
 function registHTML(classNum) {
-    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" title="${classNum}講義室" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" onclick="copyRoomUrl(${classNum});">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small btn-red" onclick="confirmDelete(${classNum});">教室を削除</button></p></div>`;
+    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" title="${classNum}講義室" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" title="教室のURLをコピーする" onclick="copyRoomUrl(${classNum});">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small btn-red" title="教室を削除する" onclick="confirmDelete(${classNum});">教室を削除</button></p></div>`;
 };
 
 function nothingHTML() {
@@ -28,7 +28,7 @@ function registered() {
 };
 registered();
 
-document.getElementById('regist-input-num').addEventListener('click', function () {
+document.getElementById('register-btn').addEventListener('click', function () {
     let classNum = document.getElementById('regist-class-num').value;
     if (Number(classNum)) {
         document.getElementById('regist').insertAdjacentHTML('beforebegin', registHTML(classNum))
@@ -36,7 +36,7 @@ document.getElementById('regist-input-num').addEventListener('click', function (
         classlist.push(classNum);
         localStorage.classlist = JSON.stringify(classlist);
         document.getElementById('regist-class-num').value = '';
-        location.reload();
+        alertOpen(`${classNum}講義室を登録しました。`);
     } else {
         alertOpen('数字を入力してください。');
     }
