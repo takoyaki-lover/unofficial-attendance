@@ -158,10 +158,8 @@ function adsOpenTimeout(timeout) {
         let r = Math.random();
         if (r < 0.25) {
             adsOpen();
-            console.log('success')
         } else {
             adsOpenTimeout(5000);
-            console.log('failure')
         }
     }, timeout);
 };
