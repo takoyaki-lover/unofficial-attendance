@@ -155,17 +155,24 @@ function adsOpen() {
 
 function adsOpenTimeout(timeout) {
     timeoutId = setTimeout(() => {
-        adsOpen();
+        let r = Math.random();
+        if (r < 0.25) {
+            adsOpen();
+            console.log('success')
+        } else {
+            adsOpenTimeout(5000);
+            console.log('failure')
+        }
     }, timeout);
 };
 
-if (localStorage.admin != 1) {
+if (true/*localStorage.admin != 1*/) {
     adsOpenTimeout(1000);
 };
 
 document.getElementById('ads-close').addEventListener('click', function () {
     document.getElementById('ads').style.display = 'none';
-    if (localStorage.admin != 1) {
-        adsOpenTimeout(7000);
+    if (true/*localStorage.admin != 1*/) {
+        adsOpenTimeout(5000);
     }
 });
