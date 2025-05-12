@@ -72,22 +72,24 @@ document.getElementById('delete-room-all').addEventListener('click', function ()
 })
 
 
-// 教室番号の入力と広告のストップ
-let timeoutId;
+// 教室番号の入力
+//let timeoutId;
 
 document.getElementById('input-jump').addEventListener('click', function () {
+    /*
     let classNum = document.getElementById('input-class-num').value;
     let date = new Date();
     let year = String(date.getFullYear());
     let month = String(date.getMonth() + 1).padStart(2, '0');
     let day = String(date.getDate()).padStart(2, '0');
     let today = year + month + day;
-    if (classNum == today) {
+    */
+    if (false/*classNum == today*/) {
         localStorage.admin = 1;
         clearTimeout(timeoutId);
-    } else if (classNum == -1) {
+    } else if (false/*classNum == -1*/) {
         localStorage.admin = 0;
-        adsOpenTimeout(5000);
+        //adsOpenTimeout(5000);
     } else {
         window.open(url + classNum);
     }
@@ -144,33 +146,5 @@ document.getElementById('confirm-yes').addEventListener('click', function () {
             deleteRoom(id[1]);
             break;
         }
-    }
-});
-
-
-// 広告の出現・消去
-function adsOpen() {
-    document.getElementById('ads').style.display = 'block';
-};
-
-function adsOpenTimeout(timeout) {
-    timeoutId = setTimeout(() => {
-        let r = Math.random();
-        if (r < 0.25) {
-            adsOpen();
-        } else {
-            adsOpenTimeout(5000);
-        }
-    }, timeout);
-};
-
-if (true/*localStorage.admin != 1*/) {
-    adsOpenTimeout(1000);
-};
-
-document.getElementById('ads-close').addEventListener('click', function () {
-    document.getElementById('ads').style.display = 'none';
-    if (true/*localStorage.admin != 1*/) {
-        adsOpenTimeout(5000);
     }
 });
