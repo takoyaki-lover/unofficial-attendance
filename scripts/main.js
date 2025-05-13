@@ -1,5 +1,5 @@
 localStorage.removeItem("gap");
-localStorage.removeItem("id"); 
+localStorage.removeItem("id");
 localStorage.removeItem("admin");
 
 // 出席システム関連
