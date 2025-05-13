@@ -1,4 +1,4 @@
-localStorage.removeItem("gap");
+localStorage.removeItem("gap"); 
 localStorage.removeItem("id");
 localStorage.removeItem("admin");
 
