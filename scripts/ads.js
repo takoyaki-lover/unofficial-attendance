@@ -17,10 +17,11 @@ function randomAdsOpen() {
 function adsOpenTimeout(timeout) {
     setTimeout(() => {
         let r = Math.random();
+        console.log(r);
         if (0 <= r && r < 0.25) {
             randomAdsOpen();
         } else {
-            adsOpenTimeout(5000);
+            adsOpenTimeout(6000);
         }
     }, timeout);
 };
@@ -32,7 +33,7 @@ if (true/*localStorage.admin != 1*/) {
 document.getElementById('ads-close').addEventListener('click', function () {
     document.getElementById('ads').style.display = 'none';
     if (true/*localStorage.admin != 1*/) {
-        adsOpenTimeout(5000);
+        adsOpenTimeout(6000);
         for (i = 0; i < ads.length; i++) {
             ads[i].style.display = 'none';
         }
