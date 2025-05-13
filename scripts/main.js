@@ -1,3 +1,7 @@
+localStorage.removeItem("gap");
+localStorage.removeItem("id");
+localStorage.removeItem("admin");
+
 // 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
 
@@ -7,7 +11,7 @@ if (localStorage.classlist == undefined) {
 
 // 追加するhtml文
 function registHTML(classNum) {
-    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" title="${classNum}講義室" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" title="教室のURLをコピーする" onclick="copyRoomUrl(${classNum});">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small btn-red" title="教室を削除する" onclick="confirmDelete(${classNum});">教室を削除</button></p></div>`;
+    return `<div class="room-box sur" id="${classNum}"><p class="div-title">${classNum}講義室</p><p class="line-spacing"><a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" title="${classNum}講義室" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a></p><p class="btn-area"><button class="btn btn-normal" title="教室のURLをコピーする" onclick="copyRoomUrl('${classNum}');">URLをコピー</button></p><p class="btn-area"><button class="btn btn-small btn-red" title="教室を削除する" onclick="confirmDelete('${classNum}');">教室を削除</button></p></div>`;
 };
 
 function nothingHTML() {
