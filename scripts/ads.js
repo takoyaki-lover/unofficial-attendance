@@ -25,17 +25,12 @@ function adsOpenTimeout(timeout) {
         }
     }, timeout);
 };
-
-if (true/*localStorage.admin != 1*/) {
-    adsOpenTimeout(1000);
-};
+adsOpenTimeout(1000);
 
 document.getElementById('ads-close').addEventListener('click', function () {
     document.getElementById('ads').style.display = 'none';
-    if (true/*localStorage.admin != 1*/) {
-        adsOpenTimeout(6000);
-        for (i = 0; i < ads.length; i++) {
-            ads[i].style.display = 'none';
-        }
+    adsOpenTimeout(6000);
+    for (i = 0; i < ads.length; i++) {
+        ads[i].style.display = 'none';
     }
 });
