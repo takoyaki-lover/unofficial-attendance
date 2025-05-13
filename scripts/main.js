@@ -73,26 +73,9 @@ document.getElementById('delete-room-all').addEventListener('click', function ()
 
 
 // 教室番号の入力
-//let timeoutId;
-
 document.getElementById('input-jump').addEventListener('click', function () {
     let classNum = document.getElementById('input-class-num').value;
-    /*
-    let date = new Date();
-    let year = String(date.getFullYear());
-    let month = String(date.getMonth() + 1).padStart(2, '0');
-    let day = String(date.getDate()).padStart(2, '0');
-    let today = year + month + day;
-    */
-    if (false/*classNum == today*/) {
-        localStorage.admin = 1;
-        clearTimeout(timeoutId);
-    } else if (false/*classNum == -1*/) {
-        localStorage.admin = 0;
-        //adsOpenTimeout(5000);
-    } else {
-        window.open(url + classNum);
-    }
+    window.open(url + classNum);
 });
 
 document.getElementById('copy-input-num').addEventListener('click', function () {
@@ -114,11 +97,13 @@ function alertClose() {
 document.getElementById('alert-x').addEventListener('click', alertClose);
 document.getElementById('alert-ok').addEventListener('click', alertClose);
 
+
 // confirm
+let id;
 function confirmOpen(confirmText, identification) {
     document.getElementById('confirm').style.display = 'block';
     document.getElementById('confirm-text').textContent = confirmText;
-    localStorage.id = JSON.stringify(identification);
+    id = identification;
 };
 
 function confirmClose() {
@@ -130,7 +115,6 @@ document.getElementById('confirm-no').addEventListener('click', confirmClose)
 
 document.getElementById('confirm-yes').addEventListener('click', function () {
     confirmClose();
-    let id = JSON.parse(localStorage.id)
     switch (id[0]) {
         case 'delete-all': {
             let classlist = JSON.parse(localStorage.classlist);
