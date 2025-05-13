@@ -76,8 +76,8 @@ document.getElementById('delete-room-all').addEventListener('click', function ()
 //let timeoutId;
 
 document.getElementById('input-jump').addEventListener('click', function () {
-    /*
     let classNum = document.getElementById('input-class-num').value;
+    /*
     let date = new Date();
     let year = String(date.getFullYear());
     let month = String(date.getMonth() + 1).padStart(2, '0');
