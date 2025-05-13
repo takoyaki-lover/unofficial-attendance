@@ -1,4 +1,4 @@
-// 広告の出現・消去 
+// 広告の出現・消去
 let ads = document.getElementsByClassName('ads-pattern')
 for (i = 0; i < ads.length; i++) {
     ads[i].style.display = 'none';
