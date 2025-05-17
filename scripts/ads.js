@@ -17,7 +17,7 @@ function randomAdsOpen() {
 function adsOpenTimeout(timeout) {
     setTimeout(() => {
         let r = Math.random();
-        if (0 <= r && r < 0.15) {
+        if (0 <= r && r < 0.1) {
             randomAdsOpen();
         } else {
             adsOpenTimeout(6000);
