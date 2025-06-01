@@ -28,7 +28,7 @@ function themeDark() {
     }
 };
 
-// デバイスのテーマを取得し適用
+// デバイスのテーマを取得して適用
 function themeJudge() {
     if (window.matchMedia('(prefers-color-scheme: light)').matches) {
         themeLight();
@@ -36,7 +36,6 @@ function themeJudge() {
         themeDark();
     }
 };
-
 themeJudge();
 setInterval(() => {
     themeJudge();
