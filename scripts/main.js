@@ -1,7 +1,3 @@
-localStorage.removeItem("gap");
-localStorage.removeItem("id");
-localStorage.removeItem("admin");
-
 // 出席システム関連
 let url = 'https://attendance.is.it-chiba.ac.jp/attendance/class_room/';
 
