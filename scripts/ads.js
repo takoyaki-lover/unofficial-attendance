@@ -28,7 +28,7 @@ function adsOpenTimeout(timeout) {
         }
     }, timeout);
 };
-adsOpenTimeout(ads_spantime);
+adsOpenTimeout(1000);
 
 // バツボタンで広告を消す
 document.getElementById('ads-close').addEventListener('click', function () {
