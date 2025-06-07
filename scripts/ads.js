@@ -7,28 +7,33 @@ for (i = 0; i < ads.length; i++) {
 // 広告をランダムに選ぶ
 function randomAdsOpen() {
     document.getElementById('ads').style.display = 'block';
-    let r = Math.random();
-    let num = Math.floor(r * ads.length);
+    let num = Math.floor(Math.random() * ads.length);
     ads[num].style.display = 'block';
 };
+
+// 広告出現確率
+let ads_p = 0.25;
+
+// 広告抽選の周期
+let ads_spantime = 8000;
 
 // 広告出現の確率抽選
 function adsOpenTimeout(timeout) {
     setTimeout(() => {
         let r = Math.random();
-        if (0 <= r && r < 0.15) {
+        if (0 <= r && r < ads_p) {
             randomAdsOpen();
         } else {
-            adsOpenTimeout(8000);
+            adsOpenTimeout(ads_spantime);
         }
     }, timeout);
 };
-adsOpenTimeout(8000);
+adsOpenTimeout(ads_spantime);
 
 // バツボタンで広告を消す
 document.getElementById('ads-close').addEventListener('click', function () {
     document.getElementById('ads').style.display = 'none';
-    adsOpenTimeout(6000);
+    adsOpenTimeout(ads_spantime);
     for (i = 0; i < ads.length; i++) {
         ads[i].style.display = 'none';
     }
