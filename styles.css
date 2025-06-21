@@ -18,7 +18,7 @@ body {
 
 .title {
     font-size: 1.8rem;
-    margin: 3px 0 -10px 0;
+    margin: 10px 0 0 0;
 }
 
 .sur {
@@ -27,7 +27,7 @@ body {
 
 .server-time-area, .client-time-area {
     width: 350px;
-    margin: 10px auto 0 auto;
+    margin: 15px auto 0 auto;
     padding: 15px 0;
 }
 
@@ -170,7 +170,7 @@ a:active {
     border: 2px solid;
     border-color: #666666;
     border-radius: 4px;
-    font-size: 1.05rem;
+    font-size: 1rem;
     width: 150px;
     height: 27px;
 }
