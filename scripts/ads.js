@@ -14,8 +14,8 @@ function randomAdsOpen() {
 // 広告出現確率
 let ads_p = 0.25;
 
-// 広告抽選の周期
-let ads_spantime = 8000;
+// 広告抽選の周期[ms]
+let ads_spantime = 10000;
 
 // 広告出現の確率抽選
 function adsOpenTimeout(timeout) {
