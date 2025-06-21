@@ -76,15 +76,15 @@ body {
     padding: 20px 0;
 }
 
-a {
+a, .btn-anchor {
     color: #1a73e8;
 }
 
-a:hover {
+a, .btn-anchor:hover {
     color: #1a73ff;
 }
 
-a:active {
+a:active, .btn-anchor:active {
     color: #1a73d6;
 }
 
@@ -118,6 +118,13 @@ a:active {
     padding: 1px 6px;
 }
 
+.btn-anchor {
+    font-size: .85rem;
+    background-color: #efefef;
+    border-color: #666666;
+    padding: 2px 8px;
+}
+
 .btn-modal {
     font-size: .75rem;
     border-color: #000000;
@@ -129,11 +136,11 @@ a:active {
     cursor: pointer;
 }
 
-.btn-normal:hover {
+.btn-normal:hover, .btn-anchor:hover {
     background-color: #dddddd;
 }
 
-.btn-normal:active {
+.btn-normal:active, .btn-anchor:active {
     background-color: #d0d0d0;
 }
 
