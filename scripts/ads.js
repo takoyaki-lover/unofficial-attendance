@@ -4,6 +4,7 @@ for (i = 0; i < ads.length; i++) {
     ads[i].style.display = 'none';
 }
 
+
 // 広告をランダムに選ぶ
 function randomAdsOpen() {
     document.getElementById('ads').style.display = 'block';
@@ -11,11 +12,14 @@ function randomAdsOpen() {
     ads[num].style.display = 'block';
 };
 
+
 // 広告出現確率
-let ads_p = 0.25;
+let ads_p = 0.1;
+
 
 // 広告抽選の周期[ms]
 let ads_spantime = 15000;
+
 
 // 広告出現の確率抽選
 function adsOpenTimeout(timeout) {
@@ -28,7 +32,11 @@ function adsOpenTimeout(timeout) {
         }
     }, timeout);
 };
-adsOpenTimeout(1000);
+
+if (ads_p != 0) {
+    adsOpenTimeout(1000);
+}
+
 
 // バツボタンで広告を消す
 document.getElementById('ads-close').addEventListener('click', function () {
