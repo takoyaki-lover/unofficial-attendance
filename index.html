@@ -5,6 +5,7 @@
     <title>出席システムハブ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5">
     <link rel="stylesheet" href="styles.css">
+
     <!-- icon -->
     <meta name="msapplication-square70x70logo" content="icon/site-tile-70x70.png">
     <meta name="msapplication-square150x150logo" content="icon/site-tile-150x150.png">
@@ -19,7 +20,7 @@
 </head>
 
 <body class="theme-main">
-
+    <!-- main -->
     <h1 class="title">出席システムハブ</h1>
 
     <div class="client-time-area sur">
@@ -28,19 +29,29 @@
     </div>
 
     <div class="regist-box sur" id="regist">
-        <p class="div-title">教室の登録</p>
+        <p class="div-title">講義室の登録</p>
         <p class="input-area"><input class="input" id="regist-class-num" title="数字を入力してください" type="text" inputmode="numeric" placeholder="入力欄"></p>
-        <p class="btn-area"><button class="btn btn-normal" id="register-btn" title="教室を登録する">登録</button></p>
-        <p class="btn-area"><button class="btn btn-small btn-red" id="delete-room-all" title="登録した教室を全て削除する">教室を<b>全て</b>削除</button> </p>
+        <p class="btn-area"><button class="btn btn-normal" id="register-btn" title="講義室を登録する">登録</button></p>
+        <p class="btn-area"><button class="btn btn-small btn-red" id="delete-room-all" title="登録した講義室を全て削除する">講義室を<b>全て</b>削除</button> </p>
     </div>
 
     <div class="input-box sur">
         <p class="div-title">クイック出席</p>
         <p class="input-area"><input class="input" id="input-class-num" title="数字を入力してください" type="text" inputmode="numeric" placeholder="入力欄"></p>
-        <p class="btn-area"><button class="btn btn-anchor" id="input-jump" title="入力した教室の出席画面へ"><u>この教室の出席画面へ</u></button></p>
-        <p class="btn-area"><button class="btn btn-normal" id="copy-input-num" title="入力した教室のURLをコピーする">URLをコピー</button></p>
+        <p class="btn-area"><button class="btn btn-anchor" id="input-jump" title="入力した講義室の出席画面へ"><u>この講義室の出席画面へ</u></button></p>
+        <p class="btn-area"><button class="btn btn-normal" id="copy-input-num" title="入力した講義室のURLをコピーする">URLをコピー</button></p>
     </div>
 
+    <div class="theme-select-area">
+        <p class="theme-title">テーマ</p>
+        <select id="theme-select" name="select" class="theme-select">
+            <option value="system">システムと同じ</option>
+            <option value="light">ライト🌞</option>
+            <option value="dark">ダーク🌙</option>
+        </select>
+    </div>
+
+    <!-- modal -->
     <div class="ads" id="ads">
         <div class="ads-area theme-modal">
             <div class="cross-area">
@@ -116,6 +127,7 @@
         </div>
     </div>
 
+    <!-- script -->
     <script src="scripts/theme.js"></script>
     <script src="scripts/time.js"></script>
     <script src="scripts/main.js"></script>
