@@ -13,6 +13,7 @@ function themeLight() {
     }
 };
 
+
 // ダークテーマ
 function themeDark() {
     for (i = 0; i < document.getElementsByClassName('theme-main').length; i++) {
@@ -27,16 +28,42 @@ function themeDark() {
         document.getElementsByClassName('sur')[i].style.borderColor = '#ffffff';
     }
 };
+if (localStorage.currenttheme == undefined) {
+    localStorage.currenttheme = "system";
+}
+
 
 // デバイスのテーマを取得して適用
+let currentTheme = localStorage.currenttheme;
+
 function themeJudge() {
-    if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    if (currentTheme == "system") {
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            themeLight();
+        } else {
+            themeDark();
+        }
+        document.getElementById('theme-select').options[0].selected = true;
+    }
+    else if (currentTheme == "light") {
         themeLight();
-    } else {
+        document.getElementById('theme-select').options[1].selected = true;
+    }
+    else if (currentTheme == "dark") {
         themeDark();
+        document.getElementById('theme-select').options[2].selected = true;
     }
 };
+
 themeJudge();
 setInterval(() => {
     themeJudge();
 }, 100);
+
+
+// テーマが変更されたとき
+document.getElementById('theme-select').addEventListener('change', function () {
+    currentTheme = document.getElementById('theme-select').value;
+    themeJudge();
+    localStorage.currenttheme = document.getElementById('theme-select').value;
+});
