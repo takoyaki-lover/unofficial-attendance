@@ -3,7 +3,7 @@ html {
     text-align: center;
 }
 
-html, a, .btn {
+html, a, .btn, .theme-select {
     font-family: "Meiryo", "メイリオ", sans-serif;
 }
 
@@ -13,7 +13,7 @@ html, a, .btn {
 
 body {
     width: 400px;
-    margin: auto auto 30px auto;
+    margin: auto auto 40px auto;
 }
 
 .title {
@@ -180,6 +180,19 @@ a:active, .btn-anchor:active {
     font-size: 1rem;
     width: 150px;
     height: 27px;
+}
+
+.theme-select-area {
+    margin: 30px auto 0 auto;
+}
+
+.theme-title {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.theme-select {
+    font-size: 0.7rem;
 }
 
 .ads {
