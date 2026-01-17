@@ -1,5 +1,5 @@
 // 広告出現確率（割合）
-let ads_p = 0.9;
+let ads_p = 0.1;
 
 // クエリパラメータにno-adsが含まれるとき、広告を無効にする
 if (location.search.includes("no-ads")) {
@@ -85,4 +85,5 @@ document.getElementById("ads-close").addEventListener("click", function () {
         ads.removeChild(ads.firstChild);
     }
     scroll_able();
+
 });
