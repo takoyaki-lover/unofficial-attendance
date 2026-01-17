@@ -1,11 +1,11 @@
 // ライトテーマ
 function themeLight() {
     for (i = 0; i < document.getElementsByClassName('theme-main').length; i++) {
-        document.getElementsByClassName('theme-main')[i].style.backgroundColor = '#ffffff';
+        document.getElementsByClassName('theme-main')[i].style.backgroundColor = '#fafafa';
         document.getElementsByClassName('theme-main')[i].style.color = '#000000';
     }
     for (i = 0; i < document.getElementsByClassName('theme-modal').length; i++) {
-        document.getElementsByClassName('theme-modal')[i].style.backgroundColor = '#f4f4f4';
+        document.getElementsByClassName('theme-modal')[i].style.backgroundColor = '#f0f0f0';
         document.getElementsByClassName('theme-modal')[i].style.color = '#000000';
     }
     for (i = 0; i < document.getElementsByClassName('sur').length; i++) {
