@@ -21,7 +21,7 @@ if (localStorage.descriptionlist == undefined || JSON.parse(localStorage.classli
 // 登録された講義室があるときに追加するHTML文
 function registHTML(classNum, description, id) {
     return `
-        <div class="room-box sur" id="${id}">
+        <div class="room-box box" id="${id}">
             <p class="div-title">${classNum}講義室</p>
             <p class="line-spacing">
                 <a href="https://attendance.is.it-chiba.ac.jp/attendance/class_room/${classNum}" title="${classNum}講義室" target="_blank" rel="noopener noreferrer">${classNum}の出席登録へ</a>
@@ -37,7 +37,7 @@ function registHTML(classNum, description, id) {
 // 一つも登録されてないときに追加するHTML文
 function nothingHTML() {
     return `
-        <div class="nothing-box sur" id="nothing">
+        <div class="nothing-box box" id="nothing">
             <p class="div-title">講義室が<span class="bold">登録されていません</span></p>
             <p class="line-spacing">下記から登録してください</p>
         </div>
