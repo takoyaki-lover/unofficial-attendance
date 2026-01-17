@@ -1,38 +1,44 @@
+// 要素の取得
+let themeMain = document.getElementsByClassName('theme-main');
+let themeHeader = document.getElementsByClassName("theme-header");
+let themeModal = document.getElementsByClassName('theme-modal');
+let box = document.getElementsByClassName("box");
+
+
 // ライトテーマ
 function themeLight() {
-    for (i = 0; i < document.getElementsByClassName('theme-main').length; i++) {
-        document.getElementsByClassName('theme-main')[i].style.backgroundColor = '#fafafa';
-        document.getElementsByClassName('theme-main')[i].style.color = '#000000';
+    for (i = 0; i < themeMain.length; i++) {
+        themeMain[i].style.backgroundColor = '#fafafa';
+        themeMain[i].style.color = '#000000';
     }
-    themeHeader = document.getElementsByClassName("theme-header");
-    for (let i = 0; i < themeHeader.length; i++) {
+    for (i = 0; i < themeHeader.length; i++) {
         themeHeader[i].style.backgroundColor = "#e8e8e8";
     }
-    for (i = 0; i < document.getElementsByClassName('theme-modal').length; i++) {
-        document.getElementsByClassName('theme-modal')[i].style.backgroundColor = '#f0f0f0';
-        document.getElementsByClassName('theme-modal')[i].style.color = '#000000';
+    for (i = 0; i < themeModal.length; i++) {
+        themeModal[i].style.backgroundColor = '#f0f0f0';
+        themeModal[i].style.color = '#000000';
     }
-    for (i = 0; i < document.getElementsByClassName('sur').length; i++) {
-        document.getElementsByClassName('sur')[i].style.borderColor = '#000000';
+    for (i = 0; i < box.length; i++) {
+        box[i].style.borderColor = '#000000';
     }
 };
 
 
 // ダークテーマ
 function themeDark() {
-    for (i = 0; i < document.getElementsByClassName('theme-main').length; i++) {
-        document.getElementsByClassName('theme-main')[i].style.backgroundColor = '#222222';
-        document.getElementsByClassName('theme-main')[i].style.color = '#ffffff';
+    for (i = 0; i < themeMain.length; i++) {
+        themeMain[i].style.backgroundColor = '#222222';
+        themeMain[i].style.color = '#ffffff';
     }
-    for (let i = 0; i < themeHeader.length; i++) {
+    for (i = 0; i < themeHeader.length; i++) {
         themeHeader[i].style.backgroundColor = "#2f2f2f";
     }
-    for (i = 0; i < document.getElementsByClassName('theme-modal').length; i++) {
-        document.getElementsByClassName('theme-modal')[i].style.backgroundColor = '#2f2f2f';
-        document.getElementsByClassName('theme-modal')[i].style.color = '#ffffff';
+    for (i = 0; i < themeModal.length; i++) {
+        themeModal[i].style.backgroundColor = '#2f2f2f';
+        themeModal[i].style.color = '#ffffff';
     }
-    for (i = 0; i < document.getElementsByClassName('sur').length; i++) {
-        document.getElementsByClassName('sur')[i].style.borderColor = '#ffffff';
+    for (i = 0; i < box.length; i++) {
+        box[i].style.borderColor = '#ffffff';
     }
 };
 
