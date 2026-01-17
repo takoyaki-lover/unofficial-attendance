@@ -1,0 +1,271 @@
+:root {
+    --header-height: 60px;
+}
+
+html {
+    font-size: 20px;
+    text-align: center;
+}
+
+html, a, .btn, .theme-select {
+    font-family: "Meiryo", "メイリオ", sans-serif;
+}
+
+body {
+    width: auto;
+    margin: 0 auto 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #2f2f2f;
+    width: calc(100%);
+    height: var(--header-height);
+    align-content: center;
+}
+
+.title {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+hr {
+    margin: 0 auto;
+    max-width: 480px;
+}
+
+.sur {
+    border: 2px solid;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.server-time-area, .client-time-area {
+    width: max-content;
+    margin: calc(var(--header-height) + 20px) auto 20px;
+}
+
+.server-time, .client-time {
+    font-size: 1.1em;
+}
+
+.sun, .mon, .tue, .wed, .thu, .fri, .sat {
+    display: none;
+}
+
+.sun {
+    color: #fa2802;
+}
+
+.sat {
+    color: #2460b4;
+}
+
+.number {
+    font-variant-numeric: tabular-nums;
+}
+
+.class-list-title {
+    font-size: .9em;
+    margin: 20px auto 5px;
+    width: max-content;
+}
+
+.div-title, a {
+    font-size: 1em;
+    margin: 0;
+}
+
+.desc-title {
+    font-size: .8em;
+}
+
+.line-spacing {
+    margin: 4px 0 0 0;
+}
+
+.room-box {
+    width: 240px;
+    margin: 0 auto 30px;
+    padding: 15px 0;
+}
+
+.nothing-box {
+    max-width: 290px;
+    margin: 0 auto 30px;
+    padding: 15px;
+}
+
+.class-area {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.regist-area, .input-area, .delete-room-area, .theme-select-area {
+    width: max-content;
+    margin: 20px auto;
+}
+
+.theme-title {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.theme-select {
+    font-size: 0.7em;
+}
+
+a, .btn-anchor {
+    color: #1a73e8;
+}
+
+a, .btn-anchor:hover {
+    color: #1a73ff;
+}
+
+a:active, .btn-anchor:active {
+    color: #1a73d6;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid;
+    border-radius: 2px;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+}
+
+.btn-normal {
+    font-size: .85em;
+    color: #000000;
+    background-color: #efefef;
+    border-color: #666666;
+    padding: 2px 8px;
+}
+
+.btn-small {
+    font-size: .7em;
+    color: #000000;
+    border-color: #1f1f1f;
+    padding: 2px 6px;
+}
+
+.btn-anchor {
+    font-size: .85em;
+    background-color: #efefef;
+    border-color: #666666;
+    padding: 2px 8px;
+}
+
+.btn-modal {
+    font-size: .75em;
+    border-color: #000000;
+    width: 65px;
+    height: 35px;
+}
+
+.btn-copy, .btn-regist, .btn-jump {
+    margin: 9px 0 0;
+}
+
+.btn-copy::after {
+    content: "📋";
+}
+
+.btn-delete {
+    margin: 12px 0 0;
+}
+
+.btn-delete-all {
+    margin: 5px 0 0;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn-normal:hover, .btn-anchor:hover {
+    background-color: #dddddd;
+}
+
+.btn-normal:active, .btn-anchor:active {
+    background-color: #d0d0d0;
+}
+
+.btn-red {
+    background-color: #d40f0f;
+}
+
+.btn-red:hover {
+    background-color: #cb0000;
+}
+
+.btn-red:active {
+    background-color: #bc0000;
+}
+
+.input-label {
+    font-size: .9em;
+}
+
+.input {
+    font-family: "Arial", sans-serif;
+    border: 2px solid;
+    border-color: #666666;
+    border-radius: 4px;
+    font-size: .85em;
+    width: 150px;
+    height: 27px;
+    padding: 2px 3px;
+}
+
+.input-desc {
+    margin: 12px 0 0 5px;
+}
+
+table {
+    margin: 5px auto 0;
+}
+
+td {
+    padding: 3px 4px;
+}
+
+.no_scroll{
+    overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 1.5em;
+    }
+
+    hr {
+        margin: 0 10px;
+    }
+
+    .div-title, a {
+        font-size: .9em;
+    }
+
+    .server-time, .client-time {
+    font-size: 1em;
+    }
+
+    .class-list-title, .input-label {
+        font-size: .8em;
+    }
+
+    .btn-normal, .btn-anchor, .input {
+        font-size: .8em;
+    }
+
+    .desc-title {
+        font-size: .75em;
+    }
+}
