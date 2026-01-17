@@ -1,0 +1,159 @@
+.ads {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.ads-modal {
+    width: 440px;
+    padding: 0;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.ads-title {
+    font-size: 1.2em;
+    margin: 0 0 3px;
+}
+
+.ads-pattern {
+    margin: 0;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 -8.8px;
+}
+
+.ads-content {
+    margin: 0;
+    padding: 0 15px 23px;
+}
+
+.ads-text-content {
+    margin: 15px 0 0;
+}
+
+.modal-main {
+    margin: 0;
+    padding: 10px 10px 15px;
+}
+
+.content-text {
+    font-size: 1em;
+    margin: 0;
+}
+
+.alert, .confirm {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.alert-content, .confirm-content {
+    margin: calc(var(--header-height) + 20px) auto auto;
+    width: calc(400px - 10px);
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+.modal-btn-area {
+    text-align: right;
+    margin: 10px 15px 0 0;
+}
+
+.btn-ok, .btn-no {
+    background-color: #efefef;
+    color: #000000;
+}
+
+.btn-ok:hover, .btn-no:hover {
+    background-color: #e5e5e5;
+}
+
+.btn-ok:active, .btn-no:active {
+    background-color: #d0d0d0;
+}
+
+.btn-yes {
+    background-color: #2a66ce;
+    color: #ffffff;
+    margin: 0 10px 0 0;
+}
+
+.btn-yes:hover {
+    background-color: #1056be;
+}
+
+.btn-yes:active {
+    background-color: #4175ce;
+}
+
+.cross-area {
+    margin: 0 0 0 auto;
+    padding: 8px;
+    width: max-content;
+    height: max-content;
+}
+
+.cross {
+    height: 7px;
+    width: 7px;
+    margin: 0;
+}
+
+.stick-area {
+    position: relative;
+    top: 3px;
+    right: .5px;
+}
+
+.stick {
+    position: absolute;
+    width: 8px;
+    height: 1.2px;
+    background-color: #777777;
+}
+
+.stick-1 {
+    transform: rotate(45deg);
+}
+
+.stick-2 {
+    transform: rotate(-45deg);
+}
+
+.cross:active .stick-1, .cross:active .stick-2{
+    background-color: #888888;
+}
+
+@media screen and (max-width: 500px) {
+    .content-text {
+        font-size: .95em;
+    }
+
+    .alert-content, .confirm-content {
+        width: calc(100% - 40px);
+    }
+
+    .ads-modal {
+        width: calc(100% - 40px);
+    }
+
+    .ads-content {
+        padding: 0 10px 23px;
+    }
+}
