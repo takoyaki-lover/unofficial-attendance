@@ -18,8 +18,13 @@
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
-.ads-title {
+.ads-label {
     font-size: 1.2em;
+    margin: 0 0 3px;
+}
+
+.ads-title {
+    font-size: 1em;
     margin: 0 0 3px;
 }
 
@@ -48,7 +53,7 @@
 }
 
 .content-text {
-    font-size: 1em;
+    font-size: .9em;
     margin: 0;
 }
 
@@ -141,8 +146,12 @@
 }
 
 @media screen and (max-width: 500px) {
+    .ads-title {
+        font-size: .9em;
+    }
+
     .content-text {
-        font-size: .95em;
+        font-size: .8em;
     }
 
     .alert-content, .confirm-content {
@@ -150,7 +159,7 @@
     }
 
     .ads-modal {
-        width: calc(100% - 40px);
+        width: calc(100% - 30px);
     }
 
     .ads-content {
