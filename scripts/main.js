@@ -45,8 +45,14 @@ function nothingHTML() {
 };
 
 
-// 配列に従って描写
-function registered() {
+// 教室を描写する
+function renderClass(HTML) {
+    document.getElementById("class-area").insertAdjacentHTML("beforeend", HTML);
+}
+
+
+// ローカルストレージを読み込んで描写
+function loadClass() {
     let classlist = JSON.parse(localStorage.classlist);
     let descriptionlist = JSON.parse(localStorage.descriptionlist);
     let classNum;
@@ -58,13 +64,13 @@ function registered() {
         } else {
             description = descriptionlist[i];
         }
-        document.getElementById("class-area").insertAdjacentHTML("beforeend", registHTML(classNum, description, i));
+        renderClass(registHTML(classNum, description, i));
     }
     if (classlist.length == 0) {
-        document.getElementById("class-area").insertAdjacentHTML("beforeend", nothingHTML());
+        renderClass(nothingHTML());
     }
 };
-registered();
+loadClass();
 
 
 // 講義室の登録
@@ -75,7 +81,7 @@ document.getElementById("register-btn").addEventListener("click", function () {
     let description = document.getElementById("regist-desc").value;
     let registeredNum = classlist.length;
     if (Number(classNum)) {
-        document.getElementById("class-area").insertAdjacentHTML("beforeend", registHTML(classNum, description, registeredNum));
+        renderClass(registHTML(classNum, description, registeredNum));
         if (classlist.length == 0) {
             document.getElementById("nothing").remove();
         }
@@ -94,7 +100,7 @@ document.getElementById("register-btn").addEventListener("click", function () {
 })
 
 
-// 説明
+// 備考欄
 document.querySelectorAll(".input-desc").forEach(function (input) {
     input.addEventListener("input", function() {
         let descriptionlist = JSON.parse(localStorage.descriptionlist);
@@ -148,6 +154,8 @@ document.getElementById("input-jump").addEventListener("click", function () {
     window.open(url + classNum);
 });
 
+
+// コピーボタンを押したとき
 document.getElementById("copy-input-num").addEventListener("click", function () {
     let classNum = document.getElementById("input-class-num").value;
     navigator.clipboard.writeText(url + classNum);
