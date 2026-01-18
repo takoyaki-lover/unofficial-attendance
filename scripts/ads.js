@@ -71,7 +71,7 @@ function adsHTML(title, url, image, text) {
 // 広告をランダムに選ぶ
 function randomAdsOpen() {
     let num = Math.floor(Math.random() * adsList.length);
-    num = 0; /* for debug */
+    // num = 0; /* for debug */
     let ads = adsList[num];
     document.getElementById("random-ads").insertAdjacentHTML("beforeend", adsHTML(ads.title, ads.url, ads.image, ads.text));
     document.getElementById("ads").style.display = "flex";
