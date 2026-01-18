@@ -35,23 +35,18 @@ document.getElementById("confirm-no").addEventListener("click", confirmClose)
 
 document.getElementById("confirm-yes").addEventListener("click", function () {
     confirmClose();
-    switch (id[0]) {
-        case "delete-all": {
-            let classlist = JSON.parse(localStorage.classlist);
-            let descriptionlist = JSON.parse(localStorage.descriptionlist);
-            let length = classlist.length;
-            for (i = 0; i < length; i++) {
-                classlist.pop();
-                descriptionlist.pop();
-            }
-            localStorage.classlist = JSON.stringify(classlist);
-            localStorage.descriptionlist = JSON.stringify(descriptionlist);
-            location.reload();
-            break;
+    if (id[0] == "delete-all") {
+        let classlist = JSON.parse(localStorage.classlist);
+        let descriptionlist = JSON.parse(localStorage.descriptionlist);
+        let length = classlist.length;
+        for (i = 0; i < length; i++) {
+            classlist.pop();
+            descriptionlist.pop();
         }
-        case "delete": {
-            deleteRoom(id[1]);
-            break;
-        }
+        localStorage.classlist = JSON.stringify(classlist);
+        localStorage.descriptionlist = JSON.stringify(descriptionlist);
+        location.reload();
+    } else if (id[0] == "delete") {
+        deleteRoom(id[1]);
     }
 });
