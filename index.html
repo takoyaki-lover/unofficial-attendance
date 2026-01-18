@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="css/modal.css">
 
     <!-- icon -->
-    <meta name="msapplication-square70x70logo" content="icon/site-tile-70x70.png">
-    <meta name="msapplication-square150x150logo" content="icon/site-tile-150x150.png">
-    <meta name="msapplication-wide310x150logo" content="icon/site-tile-310x150.png">
-    <meta name="msapplication-square310x310logo" content="icon/site-tile-310x310.png">
-    <meta name="msapplication-TileColor" content="#0078d7">
+    <!-- <meta name="msapplication-square70x70logo" content="icon/site-tile-70x70.png"> -->
+    <!-- <meta name="msapplication-square150x150logo" content="icon/site-tile-150x150.png"> -->
+    <!-- <meta name="msapplication-wide310x150logo" content="icon/site-tile-310x150.png"> -->
+    <!-- <meta name="msapplication-square310x310logo" content="icon/site-tile-310x310.png"> -->
+    <!-- <meta name="msapplication-TileColor" content="#0078d7"> -->
     <link rel="icon" href="icon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon-180x180.png">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon-180x180.png"> -->
     <!-- <link rel="icon" type="image/png" sizes="512x512" href="icon/android-chrome-512x512.png"> -->
     <!-- <link rel="icon" type="image/png" sizes="512x512" href="icon/icon-512x512.png"> -->
     <!-- end of icon -->
@@ -36,7 +36,7 @@
     <hr>
 
     <p class="class-list-title">登録済みの講義室一覧</p>
-    <div class="class-area" id="class-area"></div>
+    <div class="class-area" id="class-area"><!-- registered item is coming here --></div>
 
     <hr>
 
@@ -62,7 +62,7 @@
         <td><span class="input-label">教室番号</span></td><td><input class="input input-quick" id="input-class-num" title="数字を入力してください" type="text" inputmode="numeric" placeholder="入力欄"></td>
         </tr>
         </table>
-        <button class="btn btn-anchor btn-jump" id="input-jump" title="入力した講義室の出席画面へ"><u>この講義室の出席画面へ</u></button><br>
+        <button class="btn btn-anchor btn-jump underline" id="input-jump" title="入力した講義室の出席画面へ">この講義室の出席画面へ</button><br>
         <button class="btn btn-normal btn-copy" id="copy-input-num" title="入力した講義室のURLをコピーする">URLをコピー</button>
     </div>
 
@@ -97,7 +97,7 @@
                 </div>
             </div>
             <div class="ads-content">
-                <p class="ads-title">広告</p>
+                <p class="ads-label">広告</p>
                 <div id="random-ads"></div>
             </div>
         </div>
@@ -144,9 +144,9 @@
 
     <!-- script -->
     <script src="scripts/scroll.js"></script>
-    <script src="scripts/modal.js"></script>
     <script src="scripts/theme.js"></script>
     <script src="scripts/time.js"></script>
+    <script src="scripts/modal.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/ads.js"></script>
     <!-- end of script -->
