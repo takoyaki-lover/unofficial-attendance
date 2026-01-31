@@ -1,0 +1,104 @@
+:root {
+    --x-btn-ads-width: 6px;
+    --x-btn-ads-stick-height: 1.1px;
+    --x-btn-normal-width: 20px;
+    --x-btn-normal-stick-height: 2px;
+}
+
+.x-wrap-ads {
+    width: var(--x-btn-ads-width);
+    height: var(--x-btn-ads-width);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.x-wrap-ads .x-btn {
+    width: var(--x-btn-ads-width);
+    height: var(--x-btn-ads-width);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+    display: block;
+}
+
+.x-wrap-ads .x-icon {
+    width: var(--x-btn-ads-width);
+    height: var(--x-btn-ads-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-btn:hover:not(.x-wrap-ads .x-btn) {
+    cursor: pointer;
+}
+
+.x-wrap-ads .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-ads-width) * sqrt(2) - var(--x-btn-ads-stick-height));
+    height: var(--x-btn-ads-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-ads-width) / 2 - var(--x-btn-ads-stick-height))), calc((var(--x-btn-ads-width) - var(--x-btn-ads-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap-ads .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-ads-width) * sqrt(2) - var(--x-btn-ads-stick-height));
+    height: var(--x-btn-ads-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-ads-width) / 2 - var(--x-btn-ads-stick-height))), calc((var(--x-btn-ads-width) - var(--x-btn-ads-stick-height)) / 2)) rotate(-45deg);
+}
+
+.x-icon .x-stick {
+    background-color: #777;
+    position: absolute;
+}
+
+.x-btn:hover~ .x-icon .x-stick {
+    background-color: #888;
+}
+
+.x-btn:active~ .x-icon .x-stick {
+    background-color: #999;
+}
+
+
+.x-wrap {
+    width: var(--x-btn-normal-width);
+    height: var(--x-btn-normal-width);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.x-wrap .x-btn {
+    width: var(--x-btn-normal-width);
+    height: var(--x-btn-normal-width);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    position: absolute;
+    z-index: 2;
+    display: block;
+}
+
+.x-wrap .x-icon {
+    width: var(--x-btn-normal-width);
+    height: var(--x-btn-normal-width);
+    position: absolute;
+    z-index: 1;
+}
+
+.x-wrap .x-stick:nth-child(1) {
+    width: calc(var(--x-btn-normal-width) * sqrt(2) - var(--x-btn-normal-stick-height));
+    height: var(--x-btn-normal-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-normal-width) / 2 - var(--x-btn-normal-stick-height))), calc((var(--x-btn-normal-width) - var(--x-btn-normal-stick-height)) / 2)) rotate(45deg);
+}
+
+.x-wrap .x-stick:nth-child(2) {
+    width: calc(var(--x-btn-normal-width) * sqrt(2) - var(--x-btn-normal-stick-height));
+    height: var(--x-btn-normal-stick-height);
+    transform: translate(calc(-1 * (sqrt(2) - 1) * (var(--x-btn-normal-width) / 2 - var(--x-btn-normal-stick-height))), calc((var(--x-btn-normal-width) - var(--x-btn-normal-stick-height)) / 2)) rotate(-45deg);
+}

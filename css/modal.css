@@ -13,14 +13,19 @@
 }
 
 .ads-modal {
+    position: relative;
     width: 440px;
     padding: 0;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
+.ads-header {
+    padding: 5px 0;
+}
+
 .ads-label {
     font-size: 1.2em;
-    margin: 0 0 3px;
+    margin: 0;
 }
 
 .ads-title {
@@ -47,12 +52,25 @@
     margin: 15px 0 0;
 }
 
-.modal-main {
-    margin: 0;
-    padding: 10px 10px 15px;
+.alert-header, .confirm-header {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content-text {
+.alert-label, .confirm-label {
+    font-size: .9em;
+    margin: 0;
+    display: block;
+}
+
+.modal-main {
+    margin: 0;
+    padding: 15px 10px;
+}
+
+.modal-text {
     font-size: .9em;
     margin: 0;
 }
@@ -70,19 +88,32 @@
 }
 
 .alert-content, .confirm-content {
-    margin: calc(var(--header-height) + 20px) auto auto;
+    position: relative;
+    margin: calc(var(--header-height) + 50px) auto auto;
     width: calc(400px - 10px);
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
 .modal-btn-area {
-    text-align: right;
-    margin: 10px 15px 0 0;
+    width: max-content;
+    margin: 15px 15px 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-modal {
+    font-size: .75em;
+    border-color: #000;
+    width: 65px;
+    height: 35px;
+    padding: 0;
+    margin: 0;
 }
 
 .btn-ok, .btn-no {
     background-color: #efefef;
-    color: #000000;
+    color: #000;
 }
 
 .btn-ok:hover, .btn-no:hover {
@@ -96,7 +127,6 @@
 .btn-yes {
     background-color: #2a66ce;
     color: #ffffff;
-    margin: 0 10px 0 0;
 }
 
 .btn-yes:hover {
@@ -142,7 +172,7 @@
 }
 
 .cross:active .stick-1, .cross:active .stick-2{
-    background-color: #888888;
+    background-color: #888;
 }
 
 @media screen and (max-width: 500px) {

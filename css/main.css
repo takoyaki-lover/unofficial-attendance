@@ -19,7 +19,6 @@ body {
 header {
     position: fixed;
     top: 0;
-    background-color: #2f2f2f;
     width: calc(100%);
     height: var(--header-height);
     align-content: center;
@@ -138,15 +137,16 @@ a:active, .btn-anchor:active {
     text-align: center;
     vertical-align: middle;
     border: 2px solid;
-    border-radius: 2px;
+    border-radius: 3px;
     width: max-content;
     height: max-content;
     margin: 0;
+    user-select: none;
 }
 
 .btn-normal {
     font-size: .85em;
-    color: #000000;
+    color: #000;
     background-color: #efefef;
     border-color: #666666;
     padding: 2px 8px;
@@ -154,7 +154,7 @@ a:active, .btn-anchor:active {
 
 .btn-small {
     font-size: .7em;
-    color: #000000;
+    color: #000;
     border-color: #1f1f1f;
     border: 1px solid;
     padding: 2px 6px;
@@ -163,15 +163,8 @@ a:active, .btn-anchor:active {
 .btn-anchor {
     font-size: .85em;
     background-color: #efefef;
-    border-color: #666666;
+    border-color: #666;
     padding: 2px 8px;
-}
-
-.btn-modal {
-    font-size: .75em;
-    border-color: #000000;
-    width: 65px;
-    height: 35px;
 }
 
 .btn-copy, .btn-regist, .btn-jump {
@@ -199,7 +192,7 @@ a:active, .btn-anchor:active {
 }
 
 .btn-normal:hover, .btn-anchor:hover {
-    background-color: #dddddd;
+    background-color: #ddd;
 }
 
 .btn-normal:active, .btn-anchor:active {
@@ -225,7 +218,7 @@ a:active, .btn-anchor:active {
 .input {
     font-family: "Arial", sans-serif;
     border: 2px solid;
-    border-color: #666666;
+    border-color: #666;
     border-radius: 4px;
     font-size: .85em;
     width: 150px;
