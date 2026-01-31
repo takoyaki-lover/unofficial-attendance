@@ -62,7 +62,7 @@ function adsHTML(title, url, image, text) {
         <div class="ads-text-content">
     `;
     for (let i = 0; i < text.length; i++) {
-        html += `<p class="content-text">${text[i]}</p>`;
+        html += `<p class="modal-text">${text[i]}</p>`;
     }
     return html;
 }
@@ -106,3 +106,4 @@ document.getElementById("ads-close").addEventListener("click", function () {
     }
     scroll_able();
 });
+
