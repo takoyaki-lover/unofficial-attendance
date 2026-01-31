@@ -9,17 +9,17 @@ let box = document.getElementsByClassName("box");
 function themeLight() {
     for (i = 0; i < themeMain.length; i++) {
         themeMain[i].style.backgroundColor = '#fafafa';
-        themeMain[i].style.color = '#000000';
+        themeMain[i].style.color = '#000';
     }
     for (i = 0; i < themeHeader.length; i++) {
         themeHeader[i].style.backgroundColor = "#e8e8e8";
     }
     for (i = 0; i < themeModal.length; i++) {
         themeModal[i].style.backgroundColor = '#f0f0f0';
-        themeModal[i].style.color = '#000000';
+        themeModal[i].style.color = '#000';
     }
     for (i = 0; i < box.length; i++) {
-        box[i].style.borderColor = '#000000';
+        box[i].style.borderColor = '#000';
     }
 };
 
@@ -27,18 +27,18 @@ function themeLight() {
 // ダークテーマ
 function themeDark() {
     for (i = 0; i < themeMain.length; i++) {
-        themeMain[i].style.backgroundColor = '#222222';
-        themeMain[i].style.color = '#ffffff';
+        themeMain[i].style.backgroundColor = '#222';
+        themeMain[i].style.color = '#fff';
     }
     for (i = 0; i < themeHeader.length; i++) {
-        themeHeader[i].style.backgroundColor = "#2f2f2f";
+        themeHeader[i].style.backgroundColor = "#383838";
     }
     for (i = 0; i < themeModal.length; i++) {
         themeModal[i].style.backgroundColor = '#2f2f2f';
-        themeModal[i].style.color = '#ffffff';
+        themeModal[i].style.color = '#fff';
     }
     for (i = 0; i < box.length; i++) {
-        box[i].style.borderColor = '#ffffff';
+        box[i].style.borderColor = '#fff';
     }
 };
 
