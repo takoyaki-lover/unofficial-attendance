@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/x-btn.css">
 
     <!-- icon -->
     <!-- <meta name="msapplication-square70x70logo" content="icon/site-tile-70x70.png"> -->
@@ -88,55 +89,76 @@
     <!-- modal -->
     <div class="ads" id="ads">
         <div class="ads-modal theme-modal">
-            <div class="cross-area">
-                <div class="cross" id="ads-close">
-                    <div class="stick-area">
-                        <div class="stick stick-1"></div>
-                        <div class="stick stick-2"></div>
+            <div class="ads-header">
+                <p class="ads-label">広告</p>
+                <div class="x-wrap-ads">
+                    <button class="x-btn" id="ads-close" tabindex="-1"></button>
+                    <div class="x-icon">
+                        <div class="x-stick"></div>
+                        <div class="x-stick"></div>
                     </div>
                 </div>
             </div>
             <div class="ads-content">
-                <p class="ads-label">広告</p>
                 <div id="random-ads"></div>
             </div>
         </div>
     </div>
 
     <div class="alert" id="alert">
-        <div class="alert-content theme-modal">
-            <div class="cross-area">
+        <div class="alert-content">
+            <div class="alert-header theme-header">
+                <p class="alert-label">警告</p>
+                <div class="x-wrap">
+                    <button class="x-btn" id="alert-x" tabindex="0"></button>
+                    <div class="x-icon">
+                        <div class="x-stick"></div>
+                        <div class="x-stick"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="cross-area">
                 <div class="cross" id="alert-x">
                     <div class="stick-area">
                         <div class="stick stick-1"></div>
                         <div class="stick stick-2"></div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-main">
-                <p class="content-text" id="alert-text"></p>
-                <p class="modal-btn-area">
+            </div> -->
+            <div class="modal-main theme-modal">
+                <p class="modal-text" id="alert-text"></p>
+                <div class="modal-btn-area">
                     <button class="btn btn-modal btn-ok" id="alert-ok">OK</button>
-                </p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="confirm" id="confirm">
-        <div class="confirm-content theme-modal">
-            <div class="cross-area">
+        <div class="confirm-content">
+            <div class="confirm-header theme-header">
+                <p class="confirm-label">確認</p>
+                <div class="x-wrap">
+                    <button class="x-btn" id="confirm-x" tabindex="0"></button>
+                    <div class="x-icon">
+                        <div class="x-stick"></div>
+                        <div class="x-stick"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="cross-area">
                 <div class="cross" id="confirm-x">
                     <div class="stick-area">
                         <div class="stick stick-1"></div>
                         <div class="stick stick-2"></div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-main">
-                <p class="content-text" id="confirm-text"></p>
-                <p class="modal-btn-area">
+            </div> -->
+            <div class="modal-main theme-modal">
+                <p class="modal-text" id="confirm-text"></p>
+                <div class="modal-btn-area">
                     <button class="btn btn-modal btn-yes" id="confirm-yes">YES</button><button class="btn btn-modal btn-no" id="confirm-no">NO</button>
-                </p>
+                </div>
             </div>
         </div>
     </div>
