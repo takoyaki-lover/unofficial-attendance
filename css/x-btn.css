@@ -54,11 +54,11 @@
     position: absolute;
 }
 
-.x-btn:hover~ .x-icon .x-stick {
+.x-btn:hover:not(.x-wrap-ads .x-btn)~ .x-icon .x-stick {
     background-color: #888;
 }
 
-.x-btn:active~ .x-icon .x-stick {
+.x-btn:active:not(.x-wrap-ads .x-btn)~ .x-icon .x-stick {
     background-color: #999;
 }
 

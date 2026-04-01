@@ -22,16 +22,26 @@ header {
     width: calc(100%);
     height: var(--header-height);
     align-content: center;
+    z-index: 50;
+}
+
+.main-body-wrap {
+    margin: 0 auto;
+    padding: calc(var(--header-height)) 0 0;
+    max-width: 500px;
 }
 
 .title {
-    font-size: 1.8em;
+    font-size: 1.6em;
+    line-height: 1.4;
     margin: 0;
 }
 
 hr {
-    margin: 0 auto;
-    max-width: 480px;
+    margin: 0 20px;
+    border-width: 2px 0 0;
+    border-style: solid;
+    max-width: 100%;
 }
 
 .box {
@@ -48,11 +58,12 @@ hr {
 
 .server-time-area, .client-time-area {
     width: max-content;
-    margin: calc(var(--header-height) + 20px) auto 20px;
+    margin: 20px auto;
 }
 
 .server-time, .client-time {
     font-size: 1.1em;
+    line-height: 1.5;
 }
 
 .sun, .mon, .tue, .wed, .thu, .fri, .sat {
@@ -73,47 +84,54 @@ hr {
 
 .class-list-title {
     font-size: .9em;
+    line-height: 1.4;
     margin: 20px auto 5px;
     width: max-content;
 }
 
 .div-title, a {
     font-size: 1em;
+    line-height: 1.5;
     margin: 0;
 }
 
-.desc-title {
+.description-title {
     font-size: .8em;
+    line-height: 1.4;
 }
 
 .line-spacing {
     margin: 4px 0 0 0;
 }
 
-.room-box {
-    width: 240px;
+.class-area {
+    width: max-content;
     margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.room-box {
+    min-width: 260px;
+    margin: 0 auto;
     padding: 15px 0;
 }
 
 .nothing-box {
-    max-width: 290px;
+    min-width: max-content;
     margin: 0 auto 30px;
     padding: 15px;
 }
 
-.class-area {
-    width: max-content;
-    margin: 0 auto;
-}
-
-.regist-area, .input-area, .delete-room-area, .theme-select-area {
+.register-area, .input-area, .delete-room-area, .theme-select-area {
     width: max-content;
     margin: 20px auto;
 }
 
 .theme-title {
     font-size: 0.8em;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -141,7 +159,9 @@ a:active, .btn-anchor:active {
     width: max-content;
     height: max-content;
     margin: 0;
+    line-height: 1;
     user-select: none;
+    -webkit-user-select: none;
 }
 
 .btn-normal {
@@ -149,7 +169,7 @@ a:active, .btn-anchor:active {
     color: #000;
     background-color: #efefef;
     border-color: #666666;
-    padding: 2px 8px;
+    padding: 7px 8px;
 }
 
 .btn-small {
@@ -157,14 +177,14 @@ a:active, .btn-anchor:active {
     color: #000;
     border-color: #1f1f1f;
     border: 1px solid;
-    padding: 2px 6px;
+    padding: 6px 7px;
 }
 
 .btn-anchor {
     font-size: .85em;
     background-color: #efefef;
     border-color: #666;
-    padding: 2px 8px;
+    padding: 7px 8px;
 }
 
 .btn-copy, .btn-regist, .btn-jump {
@@ -213,29 +233,36 @@ a:active, .btn-anchor:active {
 
 .input-label {
     font-size: .9em;
+    line-height: 1.4;
 }
 
-.input {
+input[type="text"] {
     font-family: "Arial", sans-serif;
     border: 2px solid;
     border-color: #666;
     border-radius: 4px;
     font-size: .85em;
-    width: 150px;
+    width: 170px;
     height: 27px;
     padding: 2px 3px;
 }
 
-.input-desc {
-    margin: 12px 0 0 5px;
-}
-
 table {
     margin: 5px auto 0;
+    border-spacing: 0;
+}
+
+.description-table {
+    margin-top: 12px;
 }
 
 td {
     padding: 3px 4px;
+    /* outline: 1px solid */
+}
+
+.less-padding {
+    padding: 1px;
 }
 
 .no_scroll{
@@ -244,7 +271,7 @@ td {
 
 @media screen and (max-width: 500px) { /* スマホ用 */
     .title {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
     hr {
@@ -263,15 +290,15 @@ td {
         font-size: .8em;
     }
 
-    .btn-normal, .btn-anchor, .input {
+    .btn-normal, .btn-anchor, input[type="text"] {
         font-size: .8em;
     }
 
-    .desc-title {
+    .description-title {
         font-size: .75em;
     }
 
-    .input {
+    input[type="text"] {
         padding: 1px 2px;
     }
 }

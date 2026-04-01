@@ -29,61 +29,66 @@
         <h1 class="title">出席システムハブ</h1>
     </header>
 
-    <div class="client-time-area">
-        <p class="div-title">端末の現在時刻</p>
-        <p class="line-spacing client-time bold"><span class="number"><span id="c-y"></span>/<span id="c-m"></span>/<span id="c-d"></span></span>(<span id="c-sun" class="sun">日</span><span id="c-mon" class="mon">月</span><span id="c-tue" class="tue">火</span><span id="c-wed" class="wed">水</span><span id="c-thu" class="thu">木</span><span id="c-fri" class="fri">金</span><span id="c-sat" class="sat">土</span>) <span class="number"><span id="c-h"></span>:<span id="c-mi"></span>:<span id="c-s"></span></span></p>
-    </div>
+    <main class="main-body-wrap">
+        <div class="client-time-area">
+            <p class="div-title">端末の現在時刻</p>
+            <p class="line-spacing client-time bold"><span class="number"><span id="c-y"></span>/<span id="c-m"></span>/<span id="c-d"></span></span>(<span id="c-sun" class="sun">日</span><span id="c-mon" class="mon">月</span><span id="c-tue" class="tue">火</span><span id="c-wed" class="wed">水</span><span id="c-thu" class="thu">木</span><span id="c-fri" class="fri">金</span><span id="c-sat" class="sat">土</span>) <span class="number"><span id="c-h"></span>:<span id="c-mi"></span>:<span id="c-s"></span></span></p>
+        </div>
 
-    <hr>
+        <hr>
 
-    <p class="class-list-title">登録済みの講義室一覧</p>
-    <div class="class-area" id="class-area"><!-- registered item is coming here --></div>
+        <p class="class-list-title">登録済みの講義室一覧</p>
+        <div class="class-area" id="class-area"><!-- registered item is coming here --></div>
 
-    <hr>
+        <hr>
 
-    <div class="regist-area">
-        <p class="div-title">講義室の登録</p>
-        <table class="input-table">
-        <tr>
-            <td><span class="input-label">教室番号</span></td><td><input class="input" id="regist-class-num" title="数字を入力してください" type="text" inputmode="numeric" placeholder="入力欄"></td>
-        </tr>
-        <tr>
-            <td><span class="input-label">備考(任意)</span></td><td><input class="input" id="regist-desc" title="文章を入力してください(任意)" type="text" placeholder="入力欄(任意)"></td>
-        </tr>
-        </table>
-        <button class="btn btn-normal btn-regist" id="register-btn" title="講義室を登録する">登録</button>
-    </div>
+        <div class="register-area">
+            <p class="div-title">講義室の登録</p>
+            <table class="input-table">
+                <tr>
+                    <td><span class="input-label">教室番号</span></td>
+                    <td class=""><input type="text" id="regist-class-num" title="数字を入力してください" inputmode="numeric" placeholder="入力欄"></td>
+                </tr>
+                <tr>
+                    <td><span class="input-label">備考(任意)</span></td>
+                    <td class=""><input type="text" id="regist-desc" title="文章を入力してください(任意)" placeholder="入力欄(任意)"></td>
+                </tr>
+            </table>
+            <button class="btn btn-normal btn-regist" id="register-btn" title="講義室を登録する">登録</button>
+        </div>
 
-    <hr>
+        <hr>
 
-    <div class="input-area">
-        <p class="div-title">クイック出席</p>
-        <table>
-            <tr>
-        <td><span class="input-label">教室番号</span></td><td><input class="input input-quick" id="input-class-num" title="数字を入力してください" type="text" inputmode="numeric" placeholder="入力欄"></td>
-        </tr>
-        </table>
-        <button class="btn btn-anchor btn-jump underline" id="input-jump" title="入力した講義室の出席画面へ">この講義室の出席画面へ</button><br>
-        <button class="btn btn-normal btn-copy" id="copy-input-num" title="入力した講義室のURLをコピーする">URLをコピー</button>
-    </div>
+        <div class="input-area">
+            <p class="div-title">クイック出席</p>
+            <table>
+                <tr>
+                    <td><span class="input-label">教室番号</span></td>
+                    <td class="less-padding"><input type="text" id="input-class-num" title="数字を入力してください" inputmode="numeric" placeholder="入力欄"></td>
+                </tr>
+            </table>
+            <button class="btn btn-anchor btn-jump underline" id="input-jump" title="入力した講義室の出席画面へ">この講義室の出席画面へ</button><br>
+            <button class="btn btn-normal btn-copy" id="copy-input-num" title="入力した講義室のURLをコピーする">URLをコピー</button>
+        </div>
 
-    <hr>
+        <hr>
 
-    <div class="delete-room-area">
-        <p class="div-title">講義室一括削除</p>
-        <button class="btn btn-small btn-red btn-delete-all" id="delete-room-all" title="登録した講義室を全て削除する">講義室を<span class="bold">全て</span>削除</button>
-    </div>
+        <div class="delete-room-area">
+            <p class="div-title">講義室一括削除</p>
+            <button class="btn btn-small btn-red btn-delete-all" id="delete-room-all" title="登録した講義室を全て削除する">講義室を<span class="bold">全て</span>削除</button>
+        </div>
 
-    <hr>
+        <hr>
 
-    <div class="theme-select-area">
-        <p class="theme-title">テーマ</p>
-        <select id="theme-select" name="select" class="theme-select">
-            <option value="system">システムと同じ</option>
-            <option value="light">ライト🌞</option>
-            <option value="dark">ダーク🌙</option>
-        </select>
-    </div>
+        <div class="theme-select-area">
+            <p class="theme-title">テーマ</p>
+            <select id="theme-select" name="select" class="theme-select">
+                <option value="system">システムと同じ</option>
+                <option value="light">ライト🌞</option>
+                <option value="dark">ダーク🌙</option>
+            </select>
+        </div>
+    </main>
     <!-- end of main -->
 
     <!-- modal -->

@@ -28,7 +28,12 @@ function registHTML(classNum, description, id) {
             </p>
             <button class="btn btn-normal btn-copy" title="${classNum}講義室のURLをコピーする" onclick="copyRoomUrl('${classNum}');">URLをコピー</button><br>
             <button class="btn btn-small btn-red btn-delete" title="${classNum}講義室を削除する" onclick="pushDelete(${id}, '${classNum}');">講義室を削除</button><br>
-            <span class="line-spacing desc-title">備考:</span><input class="input input-desc" id="desc-${id}" title="説明" placeholder="説明を追加" value="${description}">
+            <table class="description-table">
+                <tr>
+                    <td><span class="description-title">備考:</span></td>
+                    <td class="less-padding"><input type="text" class="input-description" id="desc-${id}" title="説明" placeholder="説明を追加" value="${description}"></td>
+                </tr>
+            </table>
         </div>
     `;
 };
@@ -101,7 +106,7 @@ document.getElementById("register-btn").addEventListener("click", function () {
 
 
 // 備考欄
-document.querySelectorAll(".input-desc").forEach(function (input) {
+document.querySelectorAll(".input-description").forEach(function (input) {
     input.addEventListener("input", function() {
         let descriptionlist = JSON.parse(localStorage.descriptionlist);
         for (let i = 0; i < descriptionlist.length; i++) {

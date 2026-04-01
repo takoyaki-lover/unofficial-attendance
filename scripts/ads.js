@@ -106,4 +106,3 @@ document.getElementById("ads-close").addEventListener("click", function () {
     }
     scroll_able();
 });
-
