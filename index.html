@@ -24,11 +24,12 @@
 
 <body class="theme-main">
 
-    <!-- main -->
+<div class="page-wrap">
     <header class="theme-header">
         <h1 class="title">出席システムハブ</h1>
     </header>
 
+    <!-- main -->
     <main class="main-body-wrap">
         <div class="client-time-area">
             <p class="div-title">端末の現在時刻</p>
@@ -91,76 +92,83 @@
     </main>
     <!-- end of main -->
 
-    <!-- modal -->
-    <div class="ads" id="ads">
-        <div class="ads-modal theme-modal">
-            <div class="ads-header">
-                <p class="ads-label">広告</p>
-                <div class="x-wrap-ads">
-                    <button class="x-btn" id="ads-close" tabindex="-1"></button>
-                    <div class="x-icon">
-                        <div class="x-stick"></div>
-                        <div class="x-stick"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="ads-content">
-                <div id="random-ads"></div>
-            </div>
-        </div>
-    </div>
+    <footer class="theme-header">
+        <p>© 2025 Unofficial Attendance. All Rights Reserved.</p>
+        <p>複製を禁ずる。</p>
 
-    <div class="alert" id="alert">
-        <div class="alert-content theme-modal">
-            <div class="alert-header theme-header">
-                <p class="alert-label">警告</p>
-                <div class="x-wrap">
-                    <button class="x-btn" id="alert-x" tabindex="0"></button>
-                    <div class="x-icon">
-                        <div class="x-stick"></div>
-                        <div class="x-stick"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-main">
-                <p class="modal-text" id="alert-text"></p>
-                <div class="modal-btn-area">
-                    <button class="btn btn-modal btn-ok" id="alert-ok">OK</button>
+    </footer>
+</div>
+
+<!-- modal -->
+<div class="ads" id="ads">
+    <div class="ads-modal theme-modal">
+        <div class="ads-header">
+            <p class="ads-label">広告</p>
+            <div class="x-wrap-ads">
+                <button class="x-btn" id="ads-close" tabindex="-1"></button>
+                <div class="x-icon">
+                    <div class="x-stick"></div>
+                    <div class="x-stick"></div>
                 </div>
             </div>
         </div>
+        <div class="ads-content">
+            <div id="random-ads"></div>
+        </div>
     </div>
+</div>
 
-    <div class="confirm" id="confirm">
-        <div class="confirm-content theme-modal">
-            <div class="confirm-header theme-header">
-                <p class="confirm-label">確認</p>
-                <div class="x-wrap">
-                    <button class="x-btn" id="confirm-x" tabindex="0"></button>
-                    <div class="x-icon">
-                        <div class="x-stick"></div>
-                        <div class="x-stick"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-main">
-                <p class="modal-text" id="confirm-text"></p>
-                <div class="modal-btn-area">
-                    <button class="btn btn-modal btn-yes" id="confirm-yes">YES</button><button class="btn btn-modal btn-no" id="confirm-no">NO</button>
+<div class="alert" id="alert">
+    <div class="alert-content theme-modal">
+        <div class="alert-header theme-header">
+            <p class="alert-label">警告</p>
+            <div class="x-wrap">
+                <button class="x-btn" id="alert-x" tabindex="0"></button>
+                <div class="x-icon">
+                    <div class="x-stick"></div>
+                    <div class="x-stick"></div>
                 </div>
             </div>
         </div>
+        <div class="modal-main">
+            <p class="modal-text" id="alert-text"></p>
+            <div class="modal-btn-area">
+                <button class="btn btn-modal btn-ok" id="alert-ok">OK</button>
+            </div>
+        </div>
     </div>
-    <!-- end of modal -->
+</div>
 
-    <!-- script -->
-    <script src="scripts/scroll.js"></script>
-    <script src="scripts/theme.js"></script>
-    <script src="scripts/time.js"></script>
-    <script src="scripts/modal.js"></script>
-    <script src="scripts/main.js"></script>
-    <script src="scripts/ads.js"></script>
-    <!-- end of script -->
+<div class="confirm" id="confirm">
+    <div class="confirm-content theme-modal">
+        <div class="confirm-header theme-header">
+            <p class="confirm-label">確認</p>
+            <div class="x-wrap">
+                <button class="x-btn" id="confirm-x" tabindex="0"></button>
+                <div class="x-icon">
+                    <div class="x-stick"></div>
+                    <div class="x-stick"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-main">
+            <p class="modal-text" id="confirm-text"></p>
+            <div class="modal-btn-area">
+                <button class="btn btn-modal btn-yes" id="confirm-yes">YES</button><button class="btn btn-modal btn-no" id="confirm-no">NO</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end of modal -->
+
+<!-- script -->
+<script src="scripts/scroll.js"></script>
+<script src="scripts/theme.js"></script>
+<script src="scripts/time.js"></script>
+<script src="scripts/modal.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/ads.js"></script>
+<!-- end of script -->
 
 </body>
 
