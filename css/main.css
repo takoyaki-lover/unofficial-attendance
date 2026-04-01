@@ -51,7 +51,7 @@ header {
 .title {
     font-size: 1.6em;
     line-height: 1.4;
-    margin: 0;
+    margin: auto 0;
 }
 
 hr {
