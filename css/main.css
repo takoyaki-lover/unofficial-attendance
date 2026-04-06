@@ -137,7 +137,7 @@ hr {
 
 .nothing-box {
     min-width: max-content;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     padding: 15px;
 }
 
@@ -146,17 +146,20 @@ hr {
     margin: 20px auto;
 }
 
-.theme-title {
+.theme-select-label {
     font-size: 0.8em;
     line-height: 1.5;
     margin: 0;
 }
 
 .theme-select {
-    padding: 2px 1px;
     font-size: 0.7em;
+    margin: 5px 0 0;
+    padding: 2px 1px;
+    color: #000;
     border-color: #767676;
     border-radius: 3px;
+    line-height: 1;
 }
 
 a, .btn-anchor {
